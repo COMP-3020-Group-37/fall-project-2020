@@ -82,4 +82,24 @@ header nav * {
     margin: auto 5px;
 }
 
+/* SideBar */
+
+aside {
+    position: fixed;
+    top: var(--header-height);
+    width: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+aside * {
+    width: 100%;
+    text-align: center;
+}
+
+aside .card h2 {
+    padding-bottom: 20px;
+}
+
 }
