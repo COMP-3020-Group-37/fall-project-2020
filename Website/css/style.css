@@ -30,4 +30,56 @@ input {
 input:focus {
     outline: none;
 }
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 30px;
+    background-color: white;
+    border-bottom: 2px #b4becb solid;
+}
+
+header .header-left * {
+    margin: 0 10px;
+    color: var(--primary-color);
+}
+
+header .header-left button {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+header form button {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #7a7a7a;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flexbox;
+}
+
+header nav * {
+    float: right;
+    margin: auto 5px;
+}
+
 }
