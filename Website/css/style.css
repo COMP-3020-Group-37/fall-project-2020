@@ -2,7 +2,7 @@
     --header-height: 80px;
     --sidebar-width: 250px;
     --primary-color: #ff5e00;
-}
+  }
 
 * {
     margin: 0;
@@ -102,4 +102,19 @@ aside .card h2 {
     padding-bottom: 20px;
 }
 
+/* Main */
+
+main {
+    margin-top: var(--header-height);
+    margin-left: var(--sidebar-width);
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 380px);
+    width: auto;
+}
+
+main * {
+    width: 380px;
+    height: 260px;
 }
