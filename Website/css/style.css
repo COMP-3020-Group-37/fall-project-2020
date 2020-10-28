@@ -1,10 +1,33 @@
 :root {
-    --primary-color: red;
-    --seconday-color: darkred;
+    --header-height: 80px;
+    --sidebar-width: 250px;
+    --primary-color: #ff5e00;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(223, 223, 223);
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 18px;
+}
+  
+input:focus {
+    outline: none;
+}
 }
