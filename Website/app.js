@@ -8,15 +8,25 @@ const sidebarWidth = r.style.getPropertyValue('--sidebar-width');
 
 let sideBarHidden = false
 
-sidebarIcon.addEventListener('click', () => {
+sidebarIcon.addEventListener('click', () => { setSideBarHidden(!sideBarHidden)});
+
+window.addEventListener('resize', () => {onWindowResize();});
+
+window.addEventListener('load', () => {onWindowResize();});
+
+function setSideBarHidden(state) {
+    sideBarHidden = state
+
     if (sideBarHidden) {
-        main.style.marginLeft = sidebarWidth;
-        sidebar.style.left = '0px';
-    }
-    else {
         main.style.marginLeft = '0px';
         sidebar.style.left = '-300px';
     }
+    else {
+        main.style.marginLeft = sidebarWidth;
+        sidebar.style.left = '0px';
+    }
+}
 
-    sideBarHidden = !sideBarHidden
-});
+function onWindowResize() {
+    setSideBarHidden(window.innerWidth < 1080)
+}

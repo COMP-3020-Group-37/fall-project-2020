@@ -6,10 +6,9 @@
 
 @media screen and (max-width: 1080px) {
     :root {
-        --header-height: 160px;
+        --header-height: 120px;
     }
 }
-
 
 * {
     margin: 0;
@@ -68,6 +67,7 @@ header {
 .sidebar-toggle {
     margin: auto 5px;
     border: none;
+    display: none;
     background-color: white;
     color: var(--primary-color);
     font-size: 25px;
@@ -115,26 +115,59 @@ header {
     .logo {
         display: none;
     }
+    .sidebar-toggle {
+        display: block;
+    }
 }
 
 /* SideBar */
 
 aside {
-    position: fixed;
     top: var(--header-height);
     width: var(--sidebar-width);
+    height: 100%;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    background-color: white;
     transition: left 0.5s;
+    box-shadow: 3px 2px 5px #bebebe;
 }
 
-aside * {
-    width: 100%;
+.sidebar-category {
+    padding: 10px 0px;
+    border-bottom: 1px #b4becb solid;
+}
+
+.sidebar-category h2 {
+    margin-bottom: 10px;
     text-align: center;
 }
 
-aside .card h2 {
-    padding-bottom: 20px;
+.sidebar-category ul {
+    
+}
+
+.sidebar-category ul li {
+    display: flex;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.sidebar-category ul li i {
+    width: 35px;
+    font-size: 20px;
+}
+
+.sidebar-category ul li:hover {
+    background-color: lightgrey;
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Main */
