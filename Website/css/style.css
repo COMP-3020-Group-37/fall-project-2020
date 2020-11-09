@@ -39,8 +39,6 @@ input:focus {
 
 /* Header */
 
-
-
 header {
     top: 0;
     width: 100%;
@@ -196,4 +194,8 @@ main {
 .food-display  * {
     width: 380px;
     height: 260px;
+}
+
+.food-display .card {
+    
 }
