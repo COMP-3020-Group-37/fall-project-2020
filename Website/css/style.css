@@ -25,21 +25,7 @@ ul {
     list-style-type: none;
 }
 
-input {
-    border: 0;
-    border-bottom: 1px solid #b4becb;
-    width: 100%;
-    padding: 3px;
-    font-size: 18px;
-}
-  
-input:focus {
-    outline: none;
-}
-
 /* Header */
-
-
 
 header {
     top: 0;
@@ -87,6 +73,18 @@ header {
 
 .location i {
     padding: 0 5px;
+}
+
+.search {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 18px;
+}
+  
+.search:focus {
+    outline: none;
 }
 
 .search_sort {
