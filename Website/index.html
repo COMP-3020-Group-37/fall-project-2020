@@ -32,58 +32,62 @@
     </header>
     
     <div id="register" class="modal">
-        <form class="modal-content anim-zoom" action="/action_page.php" method="post">
-          <div class="titlecontainer">
-            <span onclick="document.getElementById('register').style.display='none'" class="btn-close" title="Close Modal">&times;</span>
-            <div>REGISTER</div>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            
-            <label for="psw"><b>Confirm password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+        <div class="titlecontainer">
+          <span onclick="document.getElementById('register').style.display='none'" class="btn-close"
+            title="Close Modal">&times;</span>
+          <div>REGISTER</div>
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <label for="psw"><b>Confirm password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <button class="btn-submit" type="submit">Register</button>
+        </div>
 
-            <button class="btn-submit" type="submit">Register</button>
-          </div>  
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
-            </div>
-        </form>
-      </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('register').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
       
     <div id="signin" class="modal">
-  
-        <form class="modal-content anim-zoom" action="/action_page.php" method="post">
-          <div class="titlecontainer">
-            <span onclick="document.getElementById('signin').style.display='none'" class="btn-close" title="Close Modal">&times;</span>
-            <div>SIGN IN</div>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> 
-              Remember me
-            </label>
-          </div>
+      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+        <div class="titlecontainer">
+          <span onclick="document.getElementById('signin').style.display='none'" class="btn-close"
+            title="Close Modal">&times;</span>
+          <div>SIGN IN</div>
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember">
+            Remember me
+          </label>
+        </div>
+        
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('signin').style.display='none'" class="cancelbtn">
-          Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-        </form>
-      </div>
+            Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
       
     <aside id="sidebar">
         <div class="sidebar-category">
