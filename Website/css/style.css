@@ -191,11 +191,69 @@ main {
     grid-template-columns: repeat(auto-fit, 380px);
 }
 
-.food-display  * {
+.food-display .card {
     width: 380px;
     height: 260px;
+    position: relative;
+}
+.food-display .card .restImg img {
+    height: 160px;
+    position: relative;
 }
 
-.food-display .card {
-    
+.food-display .card .restImg .restLogo {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    line-height: 80px;
+}
+
+.card .cardInfo {
+    height: 60px;
+    width: 340px;
+}
+
+.card .cardInfo .restName {
+    height: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.card .cardInfo .distance {
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    height: 40px;
+    width: 170px;
+}
+
+.card .cardInfo .border {
+    border-left: 2px solid black;
+    margin-left: -1.5px;
+    position: relative;
+    left: 170px;
+    bottom: 35px; 
+    height: 30px;
+    width: 2px;
+}
+
+.card .cardInfo .priceAndRate {
+    height: 40px;
+    width: 170px;
+    float: right;
+    position: relative;
+    bottom: 70px;
+}
+
+.card .cardInfo .priceAndRate p {
+    text-align: center;
+    font-size: 15px;
+    height: 20px;
 }
