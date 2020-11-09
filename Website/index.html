@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/popups.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="app.js" defer></script>
@@ -24,10 +25,93 @@
         </form>
         
         <nav class="header-box-3">
-            <button class="btn">Sign-In</button>
-            <button class="btn">Register</button>
+            <button class="btn" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">
+                Sign-In</button>
+            <button class="btn" onclick="document.getElementById('register').style.display='block'" style="width:auto;" >
+                Register</button>
         </nav>
+        
     </header>
+    
+    <div id="register" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="titlecontainer">
+            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div>REGISTER</div>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw"><b>Confirm password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Register</button>
+          </div>  
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">
+              Cancel</button>
+            </div>
+        </form>
+      </div>
+      
+      <script>
+      // Get the modal
+      var modal = document.getElementById('register');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+
+    <div id="signin" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="titlecontainer">
+            <span onclick="document.getElementById('signin').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div>SIGN IN</div>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> 
+              Remember me
+            </label>
+          </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('signin').style.display='none'" class="cancelbtn">
+          Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+      // Get the modal
+      var modal = document.getElementById('signin');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+
 
     <aside id="sidebar">
         <div class="sidebar-category">
