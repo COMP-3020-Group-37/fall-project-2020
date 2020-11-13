@@ -124,6 +124,7 @@ aside {
     top: var(--header-height);
     width: var(--sidebar-width);
     height: 100%;
+    overflow-y: auto;
     position: fixed;
     display: flex;
     flex-direction: column;
