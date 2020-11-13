@@ -48,5 +48,7 @@ window.onclick = (event) => {
 }
 
 database.restaurants.forEach((restaurant) => {
-    document.getElementById("food-display").innerHTML += restaurant.display();
+    restaurant.foodItems.forEach((foodItem) => {
+        document.getElementById("food-display").innerHTML += foodItem.display(restaurant);
+    });
 });

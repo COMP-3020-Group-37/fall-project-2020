@@ -14,8 +14,8 @@ export class Database {
         ];
 
         this.foodItems = [
-            new FoodItem("Aroma Bistro", "images/aroma_bistro.jpg", 5, 8),
-            new FoodItem("Sushi", "images/sato_sushi.jpg", 5, 8),
+            new FoodItem("Aroma Bistro", "images/aroma_bistro.jpg", 5, 4),
+            new FoodItem("Sushi", "images/sato_sushi.jpg", 5, 3),
         ];
 
         this.categories = [
@@ -36,6 +36,9 @@ export class Database {
         ];
 
         // Set Restaurants
+
+        this.restaurants[0].addFoodItem(this.foodItems[0])
+        this.restaurants[1].addFoodItem(this.foodItems[1])
         
         // Set Categories
 

@@ -11,7 +11,7 @@ export class Restaurant extends Component  {
     }
 
     addFoodItem(foodItem) {
-        foodItems.push(foodItem);
+        this.foodItems.push(foodItem);
     }
 
     display() {
