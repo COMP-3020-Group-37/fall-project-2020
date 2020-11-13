@@ -25,18 +25,6 @@ ul {
     list-style-type: none;
 }
 
-input {
-    border: 0;
-    border-bottom: 1px solid #b4becb;
-    width: 100%;
-    padding: 3px;
-    font-size: 18px;
-}
-  
-input:focus {
-    outline: none;
-}
-
 /* Header */
 
 header {
@@ -87,6 +75,18 @@ header {
     padding: 0 5px;
 }
 
+.search {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 18px;
+}
+  
+.search:focus {
+    outline: none;
+}
+
 .search_sort {
     cursor: pointer;
     background-color: white;
@@ -124,6 +124,7 @@ aside {
     top: var(--header-height);
     width: var(--sidebar-width);
     height: 100%;
+    overflow-y: auto;
     position: fixed;
     display: flex;
     flex-direction: column;

@@ -21,7 +21,7 @@ input[type=text], input[type=password] {
   }
   
   /* Set a style for all buttons in the pop ups*/
-  button {
+  .popup_button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;

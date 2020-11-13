@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/util.css">
     <link rel="stylesheet" href="css/popups.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="app.js" defer></script>
     <title>Order Food</title>
 </head>
@@ -20,7 +19,7 @@
         </div>
 
         <form class="header-box-2">
-            <input type="search" name="search" id="search" placeholder="search">
+            <input id="search" class="search" type="search" name="search"  placeholder="search">
             <button id="search_sort" class="search_sort">Sort<i class="fa fa-chevron-down"></i></button>
         </form>
         
@@ -30,89 +29,66 @@
             <button class="btn" onclick="document.getElementById('register').style.display='block'" style="width:auto;" >
                 Register</button>
         </nav>
-        
     </header>
     
     <div id="register" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="titlecontainer">
-            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <div>REGISTER</div>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            
-            <label for="psw"><b>Confirm password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+        <div class="titlecontainer">
+          <span onclick="document.getElementById('register').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <div>REGISTER</div>
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <label for="psw"><b>Confirm password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <button class="popup_button btn-submit" type="submit">Register</button>
+        </div>
 
-            <button type="submit">Register</button>
-          </div>  
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">
-              Cancel</button>
-            </div>
-        </form>
-      </div>
-      
-      <script>
-      // Get the modal
-      var modal = document.getElementById('register');
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-      </script>
-
-    <div id="signin" class="modal">
-  
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="titlecontainer">
-            <span onclick="document.getElementById('signin').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <div>SIGN IN</div>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> 
-              Remember me
-            </label>
-          </div>
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('signin').style.display='none'" class="cancelbtn">
-          Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-        </form>
-      </div>
+          <button type="button" onclick="document.getElementById('register').style.display='none'"
+            class="popup_button cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
       
-      <script>
-      // Get the modal
-      var modal = document.getElementById('signin');
+    <div id="signin" class="modal">
+      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+        <div class="titlecontainer">
+          <span onclick="document.getElementById('signin').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <div>SIGN IN</div>
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <button type="submit" class="popup_button">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember">
+            Remember me
+          </label>
+        </div>
+        
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('signin').style.display='none'" class="popup_button cancelbtn">
+            Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
       
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-      </script>
-
-
     <aside id="sidebar">
         <div class="sidebar-category">
             <ul class="links-column">
@@ -139,12 +115,28 @@
         </div>
 
         <div class="sidebar-category">
-            <h2>Policy</h2>
+          <button class="btn" onclick="document.getElementById('policy').style.display='block'" style="width:100%;" >
+            Policy</button>
             <ul>
                 <li>We accept cash only</li>
             </ul>
         </div>
     </aside>
+
+    <div id="policy" class="modal">
+      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+        <div class="titlecontainer">
+          <span onclick="document.getElementById('policy').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <div> POLICY </div>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('policy').style.display='none'" class="popup_button cancelbtn">
+            Cancel</button>
+        </div>
+      </form>
+    </div>
 
     <main id="main">
         <section class="food-display">
