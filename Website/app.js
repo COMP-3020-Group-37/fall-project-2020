@@ -1,6 +1,9 @@
+import { Database } from './script/database.js';
+
 const r = document.querySelector(':root');
 
 const main = document.getElementById('main')
+const database = new Database()
 
 const sidebar = document.getElementById('sidebar')
 const sidebarIcon = document.getElementById('sidebar_toggle');
@@ -28,7 +31,7 @@ function setSideBarHidden(state) {
 }
 
 function onWindowResize() {
-    setSideBarHidden(window.innerWidth < 1080)
+    setSideBarHidden(window.innerWidth < 1080);
     sidebar.style.height = window.innerHeight - 80 + "px";
 }
 
@@ -43,3 +46,7 @@ window.onclick = (event) => {
     if (event.target == modalSignin)
     modalSignin.style.display = "none";
 }
+
+database.restaurants.forEach((restaurant) => {
+    document.getElementById("food-display").innerHTML += restaurant.display();
+});
