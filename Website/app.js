@@ -29,6 +29,7 @@ function setSideBarHidden(state) {
 
 function onWindowResize() {
     setSideBarHidden(window.innerWidth < 1080)
+    sidebar.style.height = window.innerHeight - 80 + "px";
 }
 
 const modalRegister = document.getElementById('register');

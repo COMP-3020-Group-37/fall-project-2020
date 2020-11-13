@@ -34,7 +34,7 @@
     <div id="register" class="modal">
       <form class="modal-content anim-zoom" action="/action_page.php" method="post">
         <div class="titlecontainer">
-          <span onclick="document.getElementById('register').style.display='none'" class="btn-close"
+          <span onclick="document.getElementById('register').style.display='none'" class="close"
             title="Close Modal">&times;</span>
           <div>REGISTER</div>
         </div>
@@ -49,12 +49,12 @@
           <label for="psw"><b>Confirm password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
     
-          <button class="btn-submit" type="submit">Register</button>
+          <button class="popup_button btn-submit" type="submit">Register</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('register').style.display='none'"
-            class="cancelbtn">Cancel</button>
+            class="popup_button cancelbtn">Cancel</button>
         </div>
       </form>
     </div>
@@ -62,7 +62,7 @@
     <div id="signin" class="modal">
       <form class="modal-content anim-zoom" action="/action_page.php" method="post">
         <div class="titlecontainer">
-          <span onclick="document.getElementById('signin').style.display='none'" class="btn-close"
+          <span onclick="document.getElementById('signin').style.display='none'" class="close"
             title="Close Modal">&times;</span>
           <div>SIGN IN</div>
         </div>
@@ -74,7 +74,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
     
-          <button type="submit">Login</button>
+          <button type="submit" class="popup_button">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember">
             Remember me
@@ -82,7 +82,7 @@
         </div>
         
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('signin').style.display='none'" class="cancelbtn">
+          <button type="button" onclick="document.getElementById('signin').style.display='none'" class="popup_button cancelbtn">
             Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
@@ -115,12 +115,28 @@
         </div>
 
         <div class="sidebar-category"">
-            <h2>Policy</h2>
+          <button class="btn" onclick="document.getElementById('policy').style.display='block'" style="width:100%;" >
+            Policy</button>
             <ul>
                 <li>We accept cash only</li>
             </ul>
         </div>
     </aside>
+
+    <div id="policy" class="modal">
+      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+        <div class="titlecontainer">
+          <span onclick="document.getElementById('policy').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <div> POLICY </div>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('policy').style.display='none'" class="popup_button cancelbtn">
+            Cancel</button>
+        </div>
+      </form>
+    </div>
 
     <main id="main">
         <section class="food-display">
