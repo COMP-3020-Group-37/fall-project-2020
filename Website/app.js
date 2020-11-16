@@ -36,16 +36,16 @@ function onWindowResize() {
 }
 
 const modalRegister = document.getElementById('register');
-window.onclick = (event) => {
+window.addEventListener('click', (event) => {
     if (event.target == modalRegister)
         modalRegister.style.display = "none";
-}
+});
 
 const modalSignin = document.getElementById('signin');
-window.onclick = (event) => {
+window.addEventListener('click', (event) => {
     if (event.target == modalSignin)
     modalSignin.style.display = "none";
-}
+});
 
 database.restaurants.forEach((restaurant) => {
     restaurant.foodItems.forEach((foodItem) => {
