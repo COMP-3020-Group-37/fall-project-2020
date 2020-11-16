@@ -1,7 +1,5 @@
 export class Component {
-    constructor(name) {
-      this.name = name;
+    constructor(doc) {
+      this.doc = doc;
     }
-
-    display() {}
 }

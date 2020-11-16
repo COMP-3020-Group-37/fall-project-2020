@@ -1,7 +1,7 @@
-import { FoodItem } from './foodItem.js';
-import { Restaurant } from './restaurant.js';
-import { Category } from './category.js';
-import { Account } from './account.js';
+import { FoodItem } from './data_foodItem.js';
+import { Restaurant } from './data_restaurant.js';
+import { Category } from './data_category.js';
+import { Account } from './data_account.js';
 
 export class Database {
     constructor() {

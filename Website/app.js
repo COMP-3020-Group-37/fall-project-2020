@@ -1,4 +1,5 @@
 import { Database } from './script/database.js';
+import { StateMachine } from './script/statemachine.js'
 
 const r = document.querySelector(':root');
 
@@ -9,7 +10,10 @@ const sidebar = document.getElementById('sidebar')
 const sidebarIcon = document.getElementById('sidebar_toggle');
 const sidebarWidth = r.style.getPropertyValue('--sidebar-width');
 
-let sideBarHidden = false
+const enableStateMachine = true; // use to toggle statemachine mostly for testing html
+
+let sideBarHidden = false;
+let stateMachine = null;
 
 sidebarIcon.addEventListener('click', () => { setSideBarHidden(!sideBarHidden)});
 
@@ -44,11 +48,13 @@ window.addEventListener('click', (event) => {
 const modalSignin = document.getElementById('signin');
 window.addEventListener('click', (event) => {
     if (event.target == modalSignin)
-    modalSignin.style.display = "none";
+        modalSignin.style.display = "none";
 });
 
-database.restaurants.forEach((restaurant) => {
-    restaurant.foodItems.forEach((foodItem) => {
-        document.getElementById("food-display").innerHTML += foodItem.display(restaurant);
-    });
-});
+if (enableStateMachine) {
+
+    main.innerHTML = '';
+    sidebar.innerHTML = '';
+
+    stateMachine = new StateMachine(document, database);
+}

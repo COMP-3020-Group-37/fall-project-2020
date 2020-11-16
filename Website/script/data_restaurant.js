@@ -1,20 +1,13 @@
-import { Component } from './component.js';
-
-export class Restaurant extends Component  {
+export class Restaurant {
     constructor(name, iconPath, bannerPath, distance) {
-        super(name);
-
+        this.name = name;
         this.iconPath = iconPath;
         this.bannerPath = bannerPath;
         this.distance = distance;
-        this.foodItems = []
+        this.foodItems = [];
     }
 
     addFoodItem(foodItem) {
         this.foodItems.push(foodItem);
-    }
-
-    display() {
-        return '<div class="card"><img src='+ this.iconPath +'></div>\n';
     }
 }
