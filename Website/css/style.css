@@ -31,6 +31,7 @@ header {
     top: 0;
     width: 100%;
     height: var(--header-height);
+    z-index: 100;
     padding: 0 20px;
     position: fixed;
     display: flex;
@@ -124,6 +125,7 @@ aside {
     top: var(--header-height);
     width: var(--sidebar-width);
     height: 100%;
+    z-index: 99;
     overflow-y: auto;
     position: fixed;
     display: flex;
