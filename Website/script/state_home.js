@@ -9,7 +9,7 @@ export class StateHome extends State {
         super('home', sm, doc, db);
 
         this.accountNavCP = new AccountNavCP(doc);
-        this.CategoriesCP = new CategoriesCP(doc, db.categories);
+        this.categoriesCP = new CategoriesCP(doc, db.categories);
         this.policyNavCP = new PolicyNavCP(doc);
     }
 
@@ -31,7 +31,7 @@ export class StateHome extends State {
         });
 
         this.sidebar.appendChild(this.accountNavCP.element);
-        this.sidebar.appendChild(this.CategoriesCP.element);
+        this.sidebar.appendChild(this.categoriesCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);
     }
 
