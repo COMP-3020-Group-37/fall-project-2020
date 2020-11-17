@@ -14,6 +14,10 @@ export class BottomSideBarCP extends Component {
         this.policy.innerHTML = '<p>Policy</p>';
         this.cashOnly.innerHTML = '<i></i><p>Cash Only</p>';
 
+        this.policy.addEventListener('click', () => {
+            doc.getElementById('policy').style.display = 'block';
+        });
+
         this.list.appendChild(this.policy);
         this.list.appendChild(this.cashOnly);
         this.element.appendChild(this.list);
