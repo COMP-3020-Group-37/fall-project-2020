@@ -2,7 +2,7 @@ import { State } from './state.js';
 import { FoodItemCP } from './cp_foodItem.js';
 import { AccountNavCP } from './cp_account_nav.js';
 import { CategoriesCP } from './cp_categories.js';
-import { bottomSideBar } from './cp_buttom_side_bar.js';
+import { BottomSideBarCP } from './cp_buttom_side_bar.js';
 
 export class StateHome extends State {
     constructor(sm, doc, db) {
@@ -10,7 +10,7 @@ export class StateHome extends State {
 
         this.accountNav = new AccountNavCP(doc);
         this.CategoriesCP = new CategoriesCP(doc, db.categories);
-        this.bottomSideBar = new bottomSideBar(doc);
+        this.bottomSideBar = new BottomSideBarCP(doc);
     }
 
     onEnter() {

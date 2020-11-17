@@ -22,8 +22,6 @@ export class StateMachine {
         targetState.Enter();
 
         stack.push(targetState);
-
-        
     }
 
     back() {

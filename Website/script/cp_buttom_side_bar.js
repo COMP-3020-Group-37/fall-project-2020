@@ -1,6 +1,6 @@
 import { Component } from './component.js';
 
-export class bottomSideBar extends Component {
+export class BottomSideBarCP extends Component {
     constructor(doc) {
         super(doc);
 
