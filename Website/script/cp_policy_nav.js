@@ -1,6 +1,6 @@
 import { Component } from './component.js';
 
-export class BottomSideBarCP extends Component {
+export class PolicyNavCP extends Component {
     constructor(doc) {
         super(doc);
 
