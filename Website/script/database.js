@@ -30,6 +30,38 @@ export class Database {
         ];
 
         this.foodItems = [
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/burger1.jpg", 7, 5),
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/burger2.jpg", 8, 4),
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/burger3.jpg", 9, 3),
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/chickenNuggets.png", 8, 5),
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/coke.jpg", 2, 5),
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/fries.jpg", 2, 5),
+            new FoodItem("McDonalds", "images/restaurants/mcdonalds/icecream.jpg", 3, 5),
+
+            new FoodItem("Burger King", "images/restaurants/burgerking/burger1.jpg", 7, 5),
+            new FoodItem("Burger King", "images/restaurants/burgerking/burger2.jpg", 8, 4),
+            new FoodItem("Burger King", "images/restaurants/burgerking/burger3.jpg", 9, 3),
+            new FoodItem("Burger King", "images/restaurants/burgerking/drink1.jpg", 8, 5),
+            new FoodItem("Burger King", "images/restaurants/burgerking/fries.jpg", 2, 5),
+            new FoodItem("Burger King", "images/restaurants/burgerking/wrap.jpg", 2, 5),
+            new FoodItem("Burger King", "images/restaurants/burgerking/wrap2.jpg", 3, 5),
+
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/coke.jpg", 7, 5),
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/pizza1.jpeg", 8, 4),
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/pizza2.jpeg", 9, 3),
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/pizza3.jpeg", 8, 5),
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/pizza4.jpg", 2, 5),
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/salad.png", 2, 5),
+            new FoodItem("Boston Pizza", "images/restaurants/bostonpizza/pizza5.jpg", 3, 5),
+
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/garlicbread.jpg", 7, 5),
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/pepsi.jpg", 8, 4),
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/pizza.jpg", 9, 3),
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/pizza1.jpg", 8, 5),
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/pizza2.png", 2, 5),
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/pizza3.png", 2, 5),
+            new FoodItem("Pizza Hut", "images/restaurants/pizzahut/pizza4.png", 3, 5),
+
             new FoodItem("A&W", "images/restaurants/aw/burger1.jpg", 8, 3),
             new FoodItem("A&W", "images/restaurants/aw/burger2.png", 7, 5),
             new FoodItem("A&W", "images/restaurants/aw/burger3.jpg", 5, 4),
@@ -37,12 +69,12 @@ export class Database {
             new FoodItem("A&W", "images/restaurants/aw/fries3.png", 5, 5),  
             new FoodItem("A&W", "images/restaurants/aw/rootBeer.png", 2, 4),
 
-            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/dumplings.jpg", 8, 3),
-            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/iced_teas.jpg", 8, 3),
-            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/miso_soup.jpeg", 8, 3),
-            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/roll1.jpg", 8, 3),
-            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/roll2.jpg", 8, 3),
-            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/roll3.jpg", 8, 3)
+            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/dumplings.jpg", 3, 5),
+            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/iced_teas.jpg", 2, 4),
+            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/miso_soup.jpeg", 2, 3),
+            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/roll1.jpg", 8, 5),
+            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/roll2.jpg", 9, 5),
+            new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/roll3.jpg", 10, 5)
         ];
 
         this.categories = [
@@ -64,21 +96,53 @@ export class Database {
 
         // Set Restaurants
 
+        //McDonlads
+        this.restaurants[0].addFoodItem(this.foodItems[0])
+        this.restaurants[0].addFoodItem(this.foodItems[1])
+        this.restaurants[0].addFoodItem(this.foodItems[2])
+        this.restaurants[0].addFoodItem(this.foodItems[3])
+        this.restaurants[0].addFoodItem(this.foodItems[4])
+        this.restaurants[0].addFoodItem(this.foodItems[5])
+
+        //burger king
+        this.restaurants[1].addFoodItem(this.foodItems[6])
+        this.restaurants[1].addFoodItem(this.foodItems[7])
+        this.restaurants[1].addFoodItem(this.foodItems[8])
+        this.restaurants[1].addFoodItem(this.foodItems[9])
+        this.restaurants[1].addFoodItem(this.foodItems[10])
+        this.restaurants[1].addFoodItem(this.foodItems[11])
+
+        //boston pizza
+        this.restaurants[2].addFoodItem(this.foodItems[12])
+        this.restaurants[2].addFoodItem(this.foodItems[13])
+        this.restaurants[2].addFoodItem(this.foodItems[14])
+        this.restaurants[2].addFoodItem(this.foodItems[15])
+        this.restaurants[2].addFoodItem(this.foodItems[16])
+        this.restaurants[2].addFoodItem(this.foodItems[17])
+
+        //pizza hut
+        this.restaurants[3].addFoodItem(this.foodItems[18])
+        this.restaurants[3].addFoodItem(this.foodItems[19])
+        this.restaurants[3].addFoodItem(this.foodItems[20])
+        this.restaurants[3].addFoodItem(this.foodItems[21])
+        this.restaurants[3].addFoodItem(this.foodItems[22])
+        this.restaurants[3].addFoodItem(this.foodItems[23])
+
         //AW
-        this.restaurants[4].addFoodItem(this.foodItems[0])
-        this.restaurants[4].addFoodItem(this.foodItems[1])
-        this.restaurants[4].addFoodItem(this.foodItems[2])
-        this.restaurants[4].addFoodItem(this.foodItems[3])
-        this.restaurants[4].addFoodItem(this.foodItems[4])
-        this.restaurants[4].addFoodItem(this.foodItems[5])
+        this.restaurants[4].addFoodItem(this.foodItems[24])
+        this.restaurants[4].addFoodItem(this.foodItems[25])
+        this.restaurants[4].addFoodItem(this.foodItems[26])
+        this.restaurants[4].addFoodItem(this.foodItems[27])
+        this.restaurants[4].addFoodItem(this.foodItems[28])
+        this.restaurants[4].addFoodItem(this.foodItems[29])
 
         //Sushi Jet
-        this.restaurants[14].addFoodItem(this.foodItems[6])
-        this.restaurants[14].addFoodItem(this.foodItems[7])
-        this.restaurants[14].addFoodItem(this.foodItems[8])
-        this.restaurants[14].addFoodItem(this.foodItems[9])
-        this.restaurants[14].addFoodItem(this.foodItems[10])
-        this.restaurants[14].addFoodItem(this.foodItems[11])
+        this.restaurants[14].addFoodItem(this.foodItems[30])
+        this.restaurants[14].addFoodItem(this.foodItems[31])
+        this.restaurants[14].addFoodItem(this.foodItems[32])
+        this.restaurants[14].addFoodItem(this.foodItems[33])
+        this.restaurants[14].addFoodItem(this.foodItems[34])
+        this.restaurants[14].addFoodItem(this.foodItems[35])
         
         // Set Categories
 
