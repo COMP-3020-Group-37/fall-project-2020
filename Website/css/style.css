@@ -112,7 +112,7 @@ header {
         width: 100%;
     }
     .logo {
-        display: none;
+    display: none;
     }
     .sidebar-toggle {
         display: block;
@@ -194,17 +194,17 @@ main {
     grid-template-columns: repeat(auto-fit, 380px);
 }
 
-.food-display .card {
-    width: 380px;
-    height: 260px;
+.card {
+    width: 320px;
+    height: 280px;
     position: relative;
 }
-.food-display .card .restImg img {
-    height: 160px;
+.card .restImg  {
+    height: 190px;
     position: relative;
 }
 
-.food-display .card .restImg .restLogo {
+.card .restLogo {
     width: 90px;
     height: 90px;
     position: absolute;
@@ -212,15 +212,15 @@ main {
     left: 20px;
     border: 3px solid white;
     border-radius: 50%;
-    background-color: black;
     text-align: center;
     color: white;
     line-height: 80px;
+    background-color: black;
 }
 
 .card .cardInfo {
     height: 60px;
-    width: 340px;
+    width: 100%;
 }
 
 .card .cardInfo .restName {
@@ -234,14 +234,14 @@ main {
     font-size: 15px;
     line-height: 40px;
     height: 40px;
-    width: 170px;
+    width: 50%;
 }
 
 .card .cardInfo .border {
     border-left: 2px solid black;
     margin-left: -1.5px;
     position: relative;
-    left: 170px;
+    left: 50%;
     bottom: 35px; 
     height: 30px;
     width: 2px;
@@ -249,7 +249,7 @@ main {
 
 .card .cardInfo .priceAndRate {
     height: 40px;
-    width: 170px;
+    width: 50%;
     float: right;
     position: relative;
     bottom: 70px;
@@ -263,4 +263,25 @@ main {
 
 .policy_button {
     width:100%;
+}
+
+.cart{
+    text-align: center;
+    
+}
+.cart_title {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
