@@ -9,26 +9,17 @@ export class StateHome extends State {
         super('home', sm, doc, db);
 
         this.accountNavCP = new AccountNavCP(doc);
-        this.categoriesCP = new CategoriesCP(doc, db.categories);
+        this.categoriesCP = new CategoriesCP(doc, this, db.categories);
         this.policyNavCP = new PolicyNavCP(doc);
+
+        this.itemsSet = this.db.foodItems
     }
 
     onEnter() {
         this.main.innerHTML += '<section id="food-display" class="food-display"></section>'
         this.foodDisplay = this.doc.getElementById('food-display')
 
-        this.db.restaurants.forEach((restaurant) => {
-            restaurant.foodItems.forEach((foodItem) => {
-                let foodItemCP = new FoodItemCP(this.doc, foodItem, restaurant);
-                let element = foodItemCP.element;
-
-                element.addEventListener('click', () => {
-                    this.sm.changeToState('view');
-                });
-                
-                this.foodDisplay.appendChild(element);
-            });
-        });
+        this.itemSetUpdate();
 
         this.sidebar.appendChild(this.accountNavCP.element);
         this.sidebar.appendChild(this.categoriesCP.element);
@@ -38,5 +29,44 @@ export class StateHome extends State {
     onExit() {
         this.main.innerHTML = '';
         this.sidebar.innerHTML = '';
+    }
+
+    itemSetUpdate() {
+        this.foodDisplay.innerHTML = '';
+
+        this.itemsSet.forEach((item) => {
+            let itemCP = new FoodItemCP(this.doc, item);
+            let element = itemCP.element;
+
+            element.addEventListener('click', () => {
+                this.sm.changeToState('view');
+            });
+
+            this.foodDisplay.appendChild(element);
+        });
+    }
+
+    itemSetOrderRatingAsc() {
+        this.itemsSet.sort((a,b) => {
+            return a.rating - b.rating
+        });
+
+        this.itemSetUpdate();
+    }
+
+    itemSetOrderRatingDesc() {
+        this.itemsSet.sort((a,b) => {
+            return a.rating - b.rating
+        });
+
+        this.itemSetUpdate();
+    }
+
+    itemSetOrderDistance() {
+
+    }
+
+    itemSetOrderPrice() {
+
     }
 }
