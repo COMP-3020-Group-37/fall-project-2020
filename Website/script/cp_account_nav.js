@@ -11,7 +11,8 @@ export class AccountNavCP extends Component {
         this.popular = doc.createElement('li');
         this.favourites = doc.createElement('li');
 
-        this.home.innerHTML = '<i class="fa fa-home"></i><p>Home</p>';
+        this.home.innerHTML = '<i class="fa fa-home"></i><a href="index.html">Home</p>';
+        
         this.popular.innerHTML = '<i class="fa fa-fire"></i><p>Popular</p>';
         this.favourites.innerHTML = '<i class="fa fa-heart"></i><p>Favourites</p>';
 
