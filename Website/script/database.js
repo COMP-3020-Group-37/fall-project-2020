@@ -123,5 +123,11 @@ export class Database {
         this.accounts = [
             new Account("admin", "password"),
         ];
+
+        this.accounts[0].favourite(this.restaurants[0]);
+        this.accounts[0].favourite(this.restaurants[1]);
+        this.accounts[0].favourite(this.restaurants[2]);
+
+        this.currentAccount = null;
     }
 }

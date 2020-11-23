@@ -6,6 +6,6 @@ export class Account {
     }
 
     favourite(restaurant) {
-        favouriteRestaurants.push(restaurant);
+        this.favouriteRestaurants.push(restaurant);
     }
 }
