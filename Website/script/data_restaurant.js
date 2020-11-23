@@ -9,5 +9,6 @@ export class Restaurant {
 
     addFoodItem(foodItem) {
         this.foodItems.push(foodItem);
+        foodItem.setRestaurant(this);
     }
 }

@@ -5,6 +5,6 @@ export class Category {
     }
 
     addFoodItem(foodItem) {
-        foodItems.push(foodItem);
+        this.foodItems.push(foodItem);
     }
 }
