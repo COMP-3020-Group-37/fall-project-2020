@@ -167,7 +167,7 @@ aside {
 }
 
 .category-selected {
-    background-color: lightgrey;
+    background-color: rgb(194, 194, 194) !important;
 }
 
 .links-column {
