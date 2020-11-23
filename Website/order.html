@@ -1,144 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/util.css">
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="module" src="app.js" defer></script>
-    <title>Order Food</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/util.css">
+  <link rel="stylesheet" href="css/popups.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="app.js" defer></script>
+  <title>Order Food</title>
 </head>
+
 <body>
-    <header>
-        <div class="header-box-1">
-            <button id="sidebar_toggle" class="sidebar-toggle"><i class="fa fa-bars"></i></button>
-            <a href="index.html"><img class="logo" src="images/logos/logo.png" alt="logo" height="70px"></a>
-            <button id="location" class="location">Your Location<i class="fa fa-chevron-down"></i> </button>
-        </div>
-
-        <form class="header-box-2">
-            <input id="search" class="search" type="search" name="search"  placeholder="search">
-            <button id="search_sort" class="search_sort">Sort<i class="fa fa-chevron-down"></i></button>
-        </form>
-        
-        <nav class="header-box-3">
-            <button class="btn" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">
-                Sign-In</button>
-            <button class="btn" onclick="document.getElementById('register').style.display='block'" style="width:auto;" >
-                Register</button>
-        </nav>
-    </header>
-    
-    <div id="register" class="modal">
-      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
-        <div class="titlecontainer">
-          <span onclick="document.getElementById('register').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <div>REGISTER</div>
-        </div>
-    
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-    
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-    
-          <label for="psw"><b>Confirm password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-    
-          <button class="popup_button btn-submit" type="submit">Register</button>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('register').style.display='none'"
-            class="popup_button cancelbtn">Cancel</button>
-        </div>
-      </form>
+  <header>
+    <div class="header-box-1">
+      <button id="sidebar_toggle" class="sidebar-toggle"><i class="fa fa-bars"></i></button>
+      <a href="index.html"><img class="logo" src="images/logos/logo.png" alt="logo" height="70px"></a>
+      <button id="location" class="location">Your Location<i class="fa fa-chevron-down"></i> </button>
     </div>
-      
-    <div id="signin" class="modal">
-      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
-        <div class="titlecontainer">
-          <span onclick="document.getElementById('signin').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <div>SIGN IN</div>
-        </div>
-    
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-    
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-    
-          <button type="submit" class="popup_button">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember">
-            Remember me
-          </label>
-        </div>
-        
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('signin').style.display='none'" class="popup_button cancelbtn">
-            Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
-    </div>
-      
-    <aside id="sidebar">
-        <div class="sidebar-category">
-            <ul class="links-column">
-                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="fa fa-fire"></i><p>Popular</p></li>
-                <li><i class="fa fa-heart"></i><p>Favourites</p></li>
-            </ul>
-        </div>
-        
-        <!--The cart on the left side-->
-        <div class="sidebar-category">
-           <div class="cart">
-            <h1 class="cart_title">CART</h1>
-           </div> 
-        </div>
 
-        <div class="sidebar-category">
-          <ul>
-           <li><button class="btn" onclick="document.getElementById('policy').style.display='block'" style="width:100%;" >
+    <form class="header-box-2">
+      <input id="search" class="search" type="search" name="search" placeholder="search">
+      <button id="search_sort" class="search_sort">Sort<i class="fa fa-chevron-down"></i></button>
+    </form>
+
+    <nav class="header-box-3">
+      <button class="btn" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">
+        Sign-In</button>
+      <button class="btn" onclick="document.getElementById('register').style.display='block'" style="width:auto;">
+        Register</button>
+    </nav>
+  </header>
+
+  <div id="register" class="modal">
+    <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+      <div class="titlecontainer">
+        <span onclick="document.getElementById('register').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <div>REGISTER</div>
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw"><b>Confirm password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button class="popup_button btn-submit" type="submit">Register</button>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('register').style.display='none'"
+          class="popup_button cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="signin" class="modal">
+    <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+      <div class="titlecontainer">
+        <span onclick="document.getElementById('signin').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <div>SIGN IN</div>
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" class="popup_button">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember">
+          Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('signin').style.display='none'"
+          class="popup_button cancelbtn">
+          Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  <aside id="sidebar">
+    <div class="sidebar-category">
+      <ul class="links-column">
+        <a href="index.html">
+          <li><i class="fa fa-home"></i>Home</li>
+        </a>
+        <li><i class="fa fa-fire"></i>
+          <p>Popular</p>
+        </li>
+        <li><i class="fa fa-heart"></i>
+          <p>Favourites</p>
+        </li>
+      </ul>
+    </div>
+
+    <!--The cart on the left side-->
+    <div class="sidebar-category">
+      <div class="cart">
+        <h1 class="cart_title">CART</h1>
+        <table class="cart_table">
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>item 1</td>
+            <td>
+              <button class="add_remove_item">- </button>
+              1
+              <button class="add_remove_item"> +</button></td>
+            <td>$ 3</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="sidebar-category">
+      <ul>
+        <li><button class="btn" onclick="document.getElementById('policy').style.display='block'" style="width:100%;">
             Policy</button>
-            </li>  
-           <li>We accept cash only
-           </li>
-          </ul>
-        </div>
-        
-    </aside>
-
-    <div id="policy" class="modal">
-      <form class="modal-content anim-zoom" action="/action_page.php" method="post">
-        <div class="titlecontainer">
-          <div>
-            <h1>Introduction</h1>
-            This policy describes the types of information we may collect from you or that you may 
-            provide when you visit the website foodelivery.com (our “Website”) and our practices 
-            for collecting, using, maintaining, protecting, and disclosing that information.
-          </div>
-          <span onclick="document.getElementById('policy').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <div> POLICY </div>
-        </div>
-    
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('policy').style.display='none'" class="popup_button cancelbtn">
-            Cancel</button>
-        </div>
-      </form>
+        </li>
+        <li>We accept cash only
+        </li>
+      </ul>
     </div>
 
-    <main id="main_order">
-    </main>
+  </aside>
+
+  <div id="policy" class="modal">
+    <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+      <div class="titlecontainer">
+        <div>
+          <h1>Introduction</h1>
+          This policy describes the types of information we may collect from you or that you may
+          provide when you visit the website foodelivery.com (our “Website”) and our practices
+          for collecting, using, maintaining, protecting, and disclosing that information.
+        </div>
+        <span onclick="document.getElementById('policy').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <div> POLICY </div>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('policy').style.display='none'"
+          class="popup_button cancelbtn">
+          Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <main id="main_order">
+
+    <div class="restaurant-info">
+      <div class="special_img_background">
+        <img src="images\restaurants\aw.jpg" class="special_img">
+      </div>
+
+      <div class="restaurant-description">
+        <h1>A & W</h1>
+        <div class="rest_information">
+          <div class="hoursOfOperation">
+            <h2> Hours of operation: </h2>
+            <div class="grid-hoursOfOperation">
+              <div>Sunday:</div>
+              <div> 7am - 12am </div>
+              <div>Monday:</div>
+              <div> 7am - 12am </div>
+              <div>Tuesday:</div>
+              <div> 7am - 12am </div>
+              <div>Wednesday:</div>
+              <div> 7am - 12am </div>
+              <div>Thursday:</div>
+              <div> 7am - 12am </div>
+              <div>Friday:</div>
+              <div> 7am - 12am </div>
+              <div>Saturday:</div>
+              <div> 7am - 12am </div>
+            </div>
+          </div>
+
+          <div class="contact_restaurant">
+            <h2>Contact Us:</h2>
+            EMAIL: aw@gmail.com <br>
+            PHONE NUMBER: 2048888888<br>
+            ADDRESS: Random Address, Winnipeg
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-options">
+      <div>Appetizers</div>
+      <div>Main</div>
+      <div>Desserts</div>
+      <div>Drinks</div>
+    </div>
+
+  </main>
 </body>
+
 </html>
