@@ -28,11 +28,13 @@ export class CategoriesCP extends Component {
                 this.clearSelected();
 
                 if (this.activeCategory == category) {
+                    this.activeCategory = '';
                     this.home.itemsSet = this.home.itemsSetDefault;
                 }
                 else {
-                    this.activeCategory = category;
                     category.className = 'category-selected';
+
+                    this.activeCategory = category;
                     this.home.itemsSet = categoryData.foodItems;
                 }
 
