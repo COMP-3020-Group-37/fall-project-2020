@@ -166,6 +166,10 @@ aside {
     background-color: lightgrey;
 }
 
+.category-selected {
+    background-color: lightgrey;
+}
+
 .links-column {
     display: flex;
     flex-direction: column;

@@ -1,10 +1,9 @@
 import { Component } from './component.js';
 
 export class FoodItemCP extends Component {
-    constructor(doc, data, restaurant) {
+    constructor(doc, data) {
         super(doc);
         this.data = data;
-        this.restaurant = restaurant;
 
         let stars = ''
         for (let i = 0; i < data.rating; i++) {
@@ -20,7 +19,7 @@ export class FoodItemCP extends Component {
                                     '</div>' +
                                     '<div class = "cardInfo">' +
                                         '<div class = "restName">' + data.name + '</div>' +
-                                        '<div class = "distance">'+ restaurant.distance  + 'km' + '</div>' +
+                                        '<div class = "distance">'+ data.restaurant.distance  + 'km' + '</div>' +
                                         '<div class = "border"></div>' +
                                         '<div class = "priceAndRate">' +
                                             '<p>' + '$' + data.price + '.00' + '</p>' +
