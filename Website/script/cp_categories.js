@@ -25,13 +25,18 @@ export class CategoriesCP extends Component {
             this.categoriesData.push(categoryData);
 
             category.addEventListener('click', () => {
-                this.home.itemsSet = categoryData.foodItems;
-                this.home.itemSetUpdate();
-
                 this.clearSelected();
 
-                this.activeCategory = category;
-                category.className = 'category-selected';
+                if (this.activeCategory == category) {
+                    this.home.itemsSet = this.home.itemsSetDefault;
+                }
+                else {
+                    this.activeCategory = category;
+                    category.className = 'category-selected';
+                    this.home.itemsSet = categoryData.foodItems;
+                }
+
+                this.home.itemSetUpdate();
             });
 
             this.list.appendChild(category);

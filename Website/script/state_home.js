@@ -12,7 +12,8 @@ export class StateHome extends State {
         this.categoriesCP = new CategoriesCP(doc, this, db.categories);
         this.policyNavCP = new PolicyNavCP(doc);
 
-        this.itemsSet = this.db.foodItems
+        this.itemsSet = this.db.foodItems;
+        this.itemsSetDefault = this.db.foodItems;
     }
 
     onEnter() {
