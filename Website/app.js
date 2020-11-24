@@ -10,7 +10,7 @@ const sidebar = document.getElementById('sidebar')
 const sidebarIcon = document.getElementById('sidebar_toggle');
 const sidebarWidth = r.style.getPropertyValue('--sidebar-width');
 
-const enableStateMachine = true; // use to toggle statemachine mostly for testing html
+const enableStateMachine = false; // use to toggle statemachine mostly for testing html
 
 let sideBarHidden = false;
 let stateMachine = null;

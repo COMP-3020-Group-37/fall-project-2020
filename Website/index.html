@@ -39,7 +39,7 @@
   </header>
 
   <div id="location" class="modal">
-    <form class="modal-content anim-zoom" onclick="return false" action="close">
+    <form class="modal-content anim-zoom" onsubmit="return false" action="close">
       <div class="titlecontainer">
         <span onclick="document.getElementById('location').style.display='none'" class="close"
           title="Close Modal">&times;</span>
@@ -54,7 +54,7 @@
   </div>
 
   <div id="register" class="modal">
-    <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+    <form class="modal-content anim-zoom" onsubmit="return false" action="close">
       <div class="titlecontainer">
         <span onclick="document.getElementById('register').style.display='none'" class="close"
           title="Close Modal">&times;</span>
@@ -71,7 +71,7 @@
         <label for="psw"><b>Confirm password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button class="popup_button btn-submit" type="submit">Register</button>
+        <button class="popup_button btn-submit" type="submit" onclick="document.getElementById('register').style.display='none'">Register</button>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
@@ -82,7 +82,7 @@
   </div>
 
   <div id="signin" class="modal">
-    <form class="modal-content anim-zoom" action="/action_page.php" method="post">
+    <form class="modal-content anim-zoom" onsubmit="return false" action="close">
       <div class="titlecontainer">
         <span onclick="document.getElementById('signin').style.display='none'" class="close"
           title="Close Modal">&times;</span>
@@ -96,9 +96,9 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button type="submit" class="popup_button">Login</button>
+        <button type="submit" class="popup_button" onclick="document.getElementById('signin').style.display='none'">Login</button>
         <label>
-          <input type="checkbox" checked="checked" name="remember">
+          <input type="checkbox" name="remember">
           Remember me
         </label>
       </div>
