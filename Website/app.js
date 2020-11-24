@@ -51,11 +51,13 @@ window.addEventListener('click', (event) => {
         modalSignin.style.display = "none";
 });
 
-document.getElementById("location").onclick = function () { myFunction() };
+const modalLocation = document.getElementById('location');
+window.addEventListener('click', (event) => {
+    if (event.target == modalSignin)
+        modalLocation.style.display = "none";
+});
 
-function myFunction() {
-    document.getElementById("enter_location").classList.toggle("show");
-}
+
 
 if (enableStateMachine) {
 

@@ -70,10 +70,13 @@ header {
     font-size: large;
     font-weight: bold;
     margin: 8px 4px;
+    
 }
 
 .location i {
-    padding: 0 5px;
+    padding: 15px 5px;
+    
+
 }
 
 .search {
@@ -272,17 +275,3 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.address{
-    position: relative;
-    display: inline-block;
-}
-.enterLocationStyle {
-    display: none;
-    position: relative;
-}
-.enterLocationStyle input {
-    color: black;
-    text-decoration: none;
-    display: block;
-  }
-  .show {display:block;}
