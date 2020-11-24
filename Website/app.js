@@ -15,11 +15,11 @@ const enableStateMachine = true; // use to toggle statemachine mostly for testin
 let sideBarHidden = false;
 let stateMachine = null;
 
-sidebarIcon.addEventListener('click', () => { setSideBarHidden(!sideBarHidden)});
+sidebarIcon.addEventListener('click', () => { setSideBarHidden(!sideBarHidden) });
 
-window.addEventListener('resize', () => {onWindowResize();});
+window.addEventListener('resize', () => { onWindowResize(); });
 
-window.addEventListener('load', () => {onWindowResize();});
+window.addEventListener('load', () => { onWindowResize(); });
 
 function setSideBarHidden(state) {
     sideBarHidden = state
@@ -50,6 +50,12 @@ window.addEventListener('click', (event) => {
     if (event.target == modalSignin)
         modalSignin.style.display = "none";
 });
+
+document.getElementById("location").onclick = function () { myFunction() };
+
+function myFunction() {
+    document.getElementById("enter_location").classList.toggle("show");
+}
 
 if (enableStateMachine) {
 
