@@ -34,6 +34,7 @@ export class StateHome extends State {
 
     itemSetUpdate() {
         this.foodDisplay.innerHTML = '';
+        this.itemSetOrderRatingDesc();
 
         this.itemsSet.forEach((item) => {
             let itemCP = new FoodItemCP(this.doc, item);
@@ -49,25 +50,91 @@ export class StateHome extends State {
 
     itemSetOrderRatingAsc() {
         this.itemsSet.sort((a,b) => {
-            return a.rating - b.rating
-        });
+            let aRating = 0;
+            let bRating = 0;
+            if (typeof a.rating !== 'undefined') {
+                aRating = a.rating;
+            }
+            if (typeof b.rating !== 'undefined') {
+                bRating = b.rating;
+            }
 
-        this.itemSetUpdate();
+            return aRating - bRating;
+        });
     }
 
     itemSetOrderRatingDesc() {
         this.itemsSet.sort((a,b) => {
-            return a.rating - b.rating
+            let aRating = 0;
+            let bRating = 0;
+            if (typeof a.rating !== 'undefined') {
+                aRating = a.rating;
+            }
+            if (typeof b.rating !== 'undefined') {
+                bRating = b.rating;
+            }
+
+            return bRating - aRating;
         });
-
-        this.itemSetUpdate();
     }
 
-    itemSetOrderDistance() {
+    itemSetOrderDistanceAsc() {
+        this.itemsSet.sort((a,b) => {
+            let aDistance = Number.MAX_SAFE_INTEGER;
+            let bDistance = Number.MAX_SAFE_INTEGER;
+            if (typeof a.distance !== 'undefined') {
+                aDistance = a.distance;
+            }
+            if (typeof b.distance !== 'undefined') {
+                bDistance = b.distance;
+            }
 
+            return aDistance - bDistance;
+        });
     }
 
-    itemSetOrderPrice() {
+    itemSetOrderDistanceDesc() {
+        this.itemsSet.sort((a,b) => {
+            let aDistance = Number.MAX_SAFE_INTEGER;
+            let bDistance = Number.MAX_SAFE_INTEGER;
+            if (typeof a.distance !== 'undefined') {
+                aDistance = a.distance;
+            }
+            if (typeof b.distance !== 'undefined') {
+                bDistance = b.distance;
+            }
 
+            return bDistance - aDistance;
+        });
+    }
+
+    itemSetOrderPriceAsc() {
+        this.itemsSet.sort((a,b) => {
+            let aPrice = Number.MAX_SAFE_INTEGER;
+            let bPrice = Number.MAX_SAFE_INTEGER;
+            if (typeof a.price !== 'undefined') {
+                aPrice = a.price;
+            }
+            if (typeof b.price !== 'undefined') {
+                bPrice = b.price;
+            }
+
+            return aPrice - bPrice;
+        });
+    }
+
+    itemSetOrderPriceDesc() {
+        this.itemsSet.sort((a,b) => {
+            let aPrice = Number.MAX_SAFE_INTEGER;
+            let bPrice = Number.MAX_SAFE_INTEGER;
+            if (typeof a.price !== 'undefined') {
+                aPrice = a.price;
+            }
+            if (typeof b.price !== 'undefined') {
+                bPrice = b.price;
+            }
+
+            return bPrice - aPrice;
+        });
     }
 }
