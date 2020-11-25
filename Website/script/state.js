@@ -1,7 +1,7 @@
 export class State {
-    constructor(name, sm, doc, db) {
+    constructor(name, wd, doc, db) {
         this.name = name;
-        this.sm = sm; // state machine
+        this.wd = wd; // window
         this.doc = doc; // document
         this.db = db; // database
 
@@ -21,6 +21,15 @@ export class State {
         this.onEnter();
     }
 
+    Update() {
+        this.active = true;
+
+        if (this.debug)
+            console.log('Update ' + this.name);
+
+        this.onUpdate();
+    }
+
     Exit() {
         this.active = false;
 
@@ -31,6 +40,8 @@ export class State {
     }
 
     onEnter() {}
+
+    onUpdate() {}
 
     onExit() {}
 }

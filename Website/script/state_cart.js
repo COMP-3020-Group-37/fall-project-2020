@@ -1,8 +1,8 @@
 import { State } from './state.js';
 
 export class StateCart extends State {
-    constructor(sm, doc, db) {
-        super('cart', sm, doc, db);
+    constructor(wd, doc, db) {
+        super('#cart', wd, doc, db);
     }
 
     onEnter() {

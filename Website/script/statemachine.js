@@ -3,22 +3,28 @@ import { StateView } from './state_view.js';
 import { StateCart } from './state_cart.js'; 
 
 export class StateMachine {
-    constructor(doc, db) {
+    constructor(wd, doc, db) {
         this.stack = [];
-        this.states = [new StateHome(this, doc, db), new StateView(this, doc, db), new StateCart(this, doc, db)];
+        this.states = [new StateHome(wd, doc, db), new StateView(wd, doc, db), new StateCart(wd, doc, db)];
 
-        this.changeToState("home");
+        this.changeToState("#home");
     }
 
     changeToState(stateName) {
         let stack = this.stack;
+        let targetState = this.getState(stateName);
 
         if (stack.length > 0) {
             let currState = stack[stack.length - 1];
+
+            if (currState == targetState) {
+                currState.Update();
+                return;
+            }
+
             currState.Exit();
         }
 
-        let targetState = this.getState(stateName);
         targetState.Enter();
 
         stack.push(targetState);

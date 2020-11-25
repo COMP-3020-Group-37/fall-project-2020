@@ -5,8 +5,8 @@ import { RestaurantInfoCP } from './cp_restaurant_info.js';
 import { RestaurantMenuCP } from './cp_restaurant_menu.js';
 
 export class StateView extends State {
-    constructor(sm, doc, db) {
-        super('view', sm, doc, db);
+    constructor(wd, doc, db) {
+        super('#view', wd, doc, db);
 
         this.cartCP = new SideBarCartCP(doc);
         this.policyNavCP = new PolicyNavCP(doc);
@@ -16,9 +16,16 @@ export class StateView extends State {
         this.root = doc.querySelector(':root');
         this.sidebarWidth = '350px';
         this.sidebarWidthOriginal = this.root.style.getPropertyValue('--sidebar-width');
+        this.localtionBUtton = doc.getElementById('location-button');
     }
 
     onEnter() {
+        let hashs = this.doc.location.hash.split("/");
+        this.restaurant = this.db.getRestaurant(hashs[1]);
+
+        if (this.restaurant == null)
+            this.doc.location.hash = 'home';
+        
         this.sidebar.appendChild(this.cartCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);
         this.main.appendChild(this.restaurantInfoCP.element);
@@ -27,13 +34,20 @@ export class StateView extends State {
 
         this.main.className = 'main_order'
         this.root.style.setProperty('--sidebar-width', this.sidebarWidth);
+        this.localtionBUtton.disabled = true;
+    }
+
+    onUpdate() {
+        
     }
 
     onExit() {
         this.main.innerHTML = '';
         this.sidebar.innerHTML = '';
+        this.restaurant = null;
 
         this.main.className = 'main'
         this.root.style.setProperty('--sidebar-width', this.sidebarWidthOriginal);
+        this.localtionBUtton.disabled = false;
     }
 }

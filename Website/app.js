@@ -58,11 +58,39 @@ window.addEventListener('click', (event) => {
         modalLocation.style.display = "none";
 });
 
+<<<<<<< HEAD
+=======
+const locationInput = document.getElementById('location-input');
+const locationSubmit = document.getElementById('location-submit');
+const locationButton = document.getElementById('location-button');
+locationSubmit.addEventListener('click', (event) => {
+    let value = locationInput.value;
+
+    if (value != '') {
+        database.yourLocation = value;
+        locationButton.innerHTML = value.substring(0, 14) + '<i class="fa fa-chevron-down"></i>';
+    }
+    console.log(locationInput.value);
+});
+
+>>>>>>> master
 if (enableStateMachine) {
 
     main.innerHTML = '';
     sidebar.innerHTML = '';
+    
+    stateMachine = new StateMachine(window, document, database);
 
+    window.addEventListener('hashchange', function() {
+        let hashs = document.location.hash.split("/");
+        stateMachine.changeToState(hashs[0]);
+    }, false);
+
+<<<<<<< HEAD
     stateMachine = new StateMachine(document, database);
 }
 
+=======
+    document.location.hash = 'home'
+}
+>>>>>>> master

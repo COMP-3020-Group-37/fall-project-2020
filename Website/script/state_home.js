@@ -5,8 +5,8 @@ import { CategoriesCP } from './cp_categories.js';
 import { PolicyNavCP } from './cp_policy_nav.js';
 
 export class StateHome extends State {
-    constructor(sm, doc, db) {
-        super('home', sm, doc, db);
+    constructor(wd, doc, db) {
+        super('#home', wd, doc, db);
 
         this.accountNavCP = new AccountNavCP(doc);
         this.categoriesCP = new CategoriesCP(doc, this, db.categories);
@@ -17,6 +17,8 @@ export class StateHome extends State {
     }
 
     onEnter() {
+        let hashs = this.doc.location.hash.split("/");
+
         this.main.innerHTML += '<section id="food-display" class="food-display"></section>'
         this.foodDisplay = this.doc.getElementById('food-display')
 
@@ -25,6 +27,10 @@ export class StateHome extends State {
         this.sidebar.appendChild(this.accountNavCP.element);
         this.sidebar.appendChild(this.categoriesCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);
+    }
+
+    onUpdate() {
+        
     }
 
     onExit() {
@@ -41,7 +47,8 @@ export class StateHome extends State {
             let element = itemCP.element;
 
             element.addEventListener('click', () => {
-                this.sm.changeToState('view');
+                let itemID = item.restaurant.getFoodItemIndex(item);
+                this.doc.location.hash = "view/" + item.restaurant.name.replace(/\s/g, '') + '/' + itemID;
             });
 
             this.foodDisplay.appendChild(element);

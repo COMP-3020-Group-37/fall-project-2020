@@ -11,4 +11,13 @@ export class Restaurant {
         this.foodItems.push(foodItem);
         foodItem.setRestaurant(this);
     }
+
+    getFoodItemIndex(foodItem) {
+        let items = this.foodItems;
+        
+        for (let i = 0; i < items.length; i++) {
+            if (items[i] == foodItem)
+                return i;
+        }
+    }
 }

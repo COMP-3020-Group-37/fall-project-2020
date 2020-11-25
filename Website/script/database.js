@@ -6,6 +6,11 @@ import { Account } from './data_account.js';
 export class Database {
     constructor() {
 
+        // ----- Global Variables -----
+
+        this.yourLocation = null;
+        this.currentAccount = null;
+
         // ----- Set Restaurants -----
 
         this.restaurants = [
@@ -127,7 +132,13 @@ export class Database {
         this.accounts[0].favourite(this.restaurants[0]);
         this.accounts[0].favourite(this.restaurants[1]);
         this.accounts[0].favourite(this.restaurants[2]);
+    }
 
-        this.currentAccount = null;
+    getRestaurant(name) {
+        let rest = this.restaurants;
+        for (let i = 0; i < rest.length; i++) {
+            if (rest[i].name.replace(/\s/g, '') === name)
+                return rest[i];
+        }
     }
 }
