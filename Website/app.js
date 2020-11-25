@@ -57,6 +57,19 @@ window.addEventListener('click', (event) => {
         modalLocation.style.display = "none";
 });
 
+const locationInput = document.getElementById('location-input');
+const locationSubmit = document.getElementById('location-submit');
+const locationButton = document.getElementById('location-button');
+locationSubmit.addEventListener('click', (event) => {
+    let value = locationInput.value;
+
+    if (value != '') {
+        database.yourLocation = value;
+        locationButton.innerHTML = value.substring(0, 14) + '<i class="fa fa-chevron-down"></i>';
+    }
+    console.log(locationInput.value);
+});
+
 if (enableStateMachine) {
 
     main.innerHTML = '';

@@ -16,6 +16,7 @@ export class StateView extends State {
         this.root = doc.querySelector(':root');
         this.sidebarWidth = '350px';
         this.sidebarWidthOriginal = this.root.style.getPropertyValue('--sidebar-width');
+        this.localtionBUtton = doc.getElementById('location-button');
     }
 
     onEnter() {
@@ -33,6 +34,7 @@ export class StateView extends State {
 
         this.main.className = 'main_order'
         this.root.style.setProperty('--sidebar-width', this.sidebarWidth);
+        this.localtionBUtton.disabled = true;
     }
 
     onUpdate() {
@@ -46,5 +48,6 @@ export class StateView extends State {
 
         this.main.className = 'main'
         this.root.style.setProperty('--sidebar-width', this.sidebarWidthOriginal);
+        this.localtionBUtton.disabled = false;
     }
 }
