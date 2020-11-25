@@ -22,6 +22,12 @@ export class SideBarCartCP extends Component {
         this.element.appendChild(this.cart);
 
         this.clear();
+        this.addCartItem();
+        this.addCartItem();
+        this.addCartItem();
+        this.addCartItem();
+        this.addCartItem();
+        this.addCartItem();
     }
 
     clear() {
@@ -31,6 +37,38 @@ export class SideBarCartCP extends Component {
         tableHeader.innerHTML = '<th>Item</th><th>Quantity</th><th>Price</th>';
 
         this.table.appendChild(tableHeader);
+    }
+
+    addCartItem() {
+      let item = this.doc.createElement('tr');
+
+      let itemName = this.doc.createElement('td');
+      itemName.innerHTML = 'item 1';
+
+      let itemCount = this.doc.createElement('td');
+
+      let itemsub = this.doc.createElement('button');
+      itemsub.className = 'add_remove_item';
+      itemsub.innerHTML = '-';
+
+      let itemtotal = this.doc.createElement('p');
+      itemtotal.innerHTML = '1';
+
+      let itemadd = this.doc.createElement('button');
+      itemadd.className = 'add_remove_item';
+      itemadd.innerHTML = '+';
+
+      itemCount.appendChild(itemadd);
+      itemCount.appendChild(itemtotal);
+      itemCount.appendChild(itemsub);
+      
+      let itemCost = this.doc.createElement('td');
+      itemCost.innerHTML = '$1.00';
+
+      item.appendChild(itemName);
+      item.appendChild(itemCount);
+      item.appendChild(itemCost);
+      this.table.appendChild(item);
     }
 }
 
