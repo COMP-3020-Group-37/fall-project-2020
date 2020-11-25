@@ -5,8 +5,8 @@ import { CategoriesCP } from './cp_categories.js';
 import { PolicyNavCP } from './cp_policy_nav.js';
 
 export class StateHome extends State {
-    constructor(sm, doc, db) {
-        super('home', sm, doc, db);
+    constructor(wd, doc, db) {
+        super('#home', wd, doc, db);
 
         this.accountNavCP = new AccountNavCP(doc);
         this.categoriesCP = new CategoriesCP(doc, this, db.categories);
@@ -41,7 +41,7 @@ export class StateHome extends State {
             let element = itemCP.element;
 
             element.addEventListener('click', () => {
-                this.sm.changeToState('view');
+                this.doc.location.hash = "view/" + item.restaurant.name;
             });
 
             this.foodDisplay.appendChild(element);

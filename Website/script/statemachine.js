@@ -3,11 +3,11 @@ import { StateView } from './state_view.js';
 import { StateCart } from './state_cart.js'; 
 
 export class StateMachine {
-    constructor(doc, db) {
+    constructor(wd, doc, db) {
         this.stack = [];
-        this.states = [new StateHome(this, doc, db), new StateView(this, doc, db), new StateCart(this, doc, db)];
+        this.states = [new StateHome(wd, doc, db), new StateView(wd, doc, db), new StateCart(wd, doc, db)];
 
-        this.changeToState("home");
+        this.changeToState("#home");
     }
 
     changeToState(stateName) {
@@ -18,6 +18,7 @@ export class StateMachine {
             currState.Exit();
         }
 
+        console.log(stateName);
         let targetState = this.getState(stateName);
         targetState.Enter();
 

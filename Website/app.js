@@ -57,12 +57,17 @@ window.addEventListener('click', (event) => {
         modalLocation.style.display = "none";
 });
 
-
-
 if (enableStateMachine) {
 
     main.innerHTML = '';
     sidebar.innerHTML = '';
+    
+    stateMachine = new StateMachine(window, document, database);
 
-    stateMachine = new StateMachine(document, database);
+    window.addEventListener('hashchange', function() {
+        let hashs = document.location.hash.split("/");
+        stateMachine.changeToState(hashs[0]);
+    }, false);
+
+    document.location.hash = 'home'
 }

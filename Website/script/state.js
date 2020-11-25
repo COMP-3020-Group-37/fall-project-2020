@@ -1,7 +1,7 @@
 export class State {
-    constructor(name, sm, doc, db) {
+    constructor(name, wd, doc, db) {
         this.name = name;
-        this.sm = sm; // state machine
+        this.wd = wd; // window
         this.doc = doc; // document
         this.db = db; // database
 

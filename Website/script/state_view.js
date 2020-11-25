@@ -5,8 +5,8 @@ import { RestaurantInfoCP } from './cp_restaurant_info.js';
 import { RestaurantMenuCP } from './cp_restaurant_menu.js';
 
 export class StateView extends State {
-    constructor(sm, doc, db) {
-        super('view', sm, doc, db);
+    constructor(wd, doc, db) {
+        super('#view', wd, doc, db);
 
         this.cartCP = new SideBarCartCP(doc);
         this.policyNavCP = new PolicyNavCP(doc);
@@ -19,6 +19,7 @@ export class StateView extends State {
     }
 
     onEnter() {
+        
         this.sidebar.appendChild(this.cartCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);
         this.main.appendChild(this.restaurantInfoCP.element);
