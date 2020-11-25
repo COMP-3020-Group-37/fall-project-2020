@@ -19,6 +19,11 @@ export class StateView extends State {
     }
 
     onEnter() {
+        let hashs = this.doc.location.hash.split("/");
+        this.restaurant = this.db.getRestaurant(hashs[1]);
+
+        if (this.restaurant == null)
+            this.doc.location.hash = 'home';
         
         this.sidebar.appendChild(this.cartCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);
@@ -30,9 +35,14 @@ export class StateView extends State {
         this.root.style.setProperty('--sidebar-width', this.sidebarWidth);
     }
 
+    onUpdate() {
+        
+    }
+
     onExit() {
         this.main.innerHTML = '';
         this.sidebar.innerHTML = '';
+        this.restaurant = null;
 
         this.main.className = 'main'
         this.root.style.setProperty('--sidebar-width', this.sidebarWidthOriginal);

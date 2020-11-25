@@ -12,14 +12,19 @@ export class StateMachine {
 
     changeToState(stateName) {
         let stack = this.stack;
+        let targetState = this.getState(stateName);
 
         if (stack.length > 0) {
             let currState = stack[stack.length - 1];
+
+            if (currState == targetState) {
+                currState.Update();
+                return;
+            }
+
             currState.Exit();
         }
 
-        console.log(stateName);
-        let targetState = this.getState(stateName);
         targetState.Enter();
 
         stack.push(targetState);
