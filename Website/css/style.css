@@ -70,13 +70,10 @@ header {
     font-size: large;
     font-weight: bold;
     margin: 8px 4px;
-    
 }
 
 .location i {
     padding: 15px 5px;
-    
-
 }
 
 .search {
@@ -275,3 +272,4 @@ a {
     text-decoration: none;
     color: inherit;
 }
+

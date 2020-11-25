@@ -1,6 +1,7 @@
 import { Database } from './script/database.js';
 import { StateMachine } from './script/statemachine.js'
 
+
 const r = document.querySelector(':root');
 
 const main = document.getElementById('main')
@@ -57,8 +58,6 @@ window.addEventListener('click', (event) => {
         modalLocation.style.display = "none";
 });
 
-
-
 if (enableStateMachine) {
 
     main.innerHTML = '';
@@ -66,3 +65,4 @@ if (enableStateMachine) {
 
     stateMachine = new StateMachine(document, database);
 }
+
