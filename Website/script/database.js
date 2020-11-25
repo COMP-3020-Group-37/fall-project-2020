@@ -130,4 +130,12 @@ export class Database {
 
         this.currentAccount = null;
     }
+
+    getRestaurant(name) {
+        let rest = this.restaurants;
+        for (let i = 0; i < rest.length; i++) {
+            if (rest[i].name.replace(/\s/g, '') === name)
+                return rest[i];
+        }
+    }
 }
