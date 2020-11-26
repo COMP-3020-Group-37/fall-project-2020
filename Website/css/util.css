@@ -28,3 +28,7 @@
     border: none;
     border-radius: 5px;
 }
+
+.warning {
+    color: rgb(255, 85, 55);
+}

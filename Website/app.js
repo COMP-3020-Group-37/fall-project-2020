@@ -85,17 +85,20 @@ registerSubmit.addEventListener('click', (event) => {
     let username = registerUsername.value;
     let password = registerPassword.value;
     let password2 = registerPassword2.value;
+    let errorElement = document.getElementById('warning-register');
 
     for (let i = 0; i < accounts.length; i++) {
         let account = accounts[i];
 
         if (account.username == username) {
-            alert('Username is already taken');
+            errorElement.style.display='';
+            errorElement.innerHTML = 'Username is already taken';
             return false;
         }
 
         if (password != password2) {
-            alert('Passwords do not match');
+            errorElement.style.display='';
+            errorElement.innerHTML = 'Passwords do not match';
             return false;
         }
     }
@@ -110,6 +113,9 @@ registerSubmit.addEventListener('click', (event) => {
     usernameLabel.innerHTML = newAccount.username;
     usernameLabel.style.display = '';
     buttonLogout.style.display = '';
+
+    errorElement.style.display='none';
+    document.getElementById('register').style.display='none';
 });
 
 const loginForm = document.getElementById('signin');
@@ -139,10 +145,13 @@ loginSubmit.addEventListener('click', (event) => {
         usernameLabel.innerHTML=foundAccount.username;
         usernameLabel.style.display = '';
         buttonLogout.style.display = '';
+
+        document.getElementById('warning-userpass').style.display='none';
     }
     else {
-        alert("Did not find an account with that username and password");
         loginPassword.value = '';
+
+        document.getElementById('warning-userpass').style.display='';
     }
 });
 
