@@ -6,7 +6,7 @@ export class State {
         this.db = db; // database
 
         this.active = false;
-        this.debug = true;
+        this.debug = false;
 
         this.main = document.getElementById('main')
         this.sidebar = document.getElementById('sidebar')
