@@ -8,10 +8,10 @@ export class StateView extends State {
     constructor(wd, doc, db) {
         super('#view', wd, doc, db);
 
-        this.cartCP = new SideBarCartCP(doc);
+        this.cartCP = new SideBarCartCP(doc, db);
         this.policyNavCP = new PolicyNavCP(doc);
         this.restaurantInfoCP = new RestaurantInfoCP(doc);
-        this.restaurantMenuCP = new RestaurantMenuCP(doc);
+        this.restaurantMenuCP = new RestaurantMenuCP(doc, this.cartCP);
 
         this.root = doc.querySelector(':root');
         this.sidebarWidth = '350px';
@@ -22,9 +22,19 @@ export class StateView extends State {
     onEnter() {
         let hashs = this.doc.location.hash.split("/");
         this.restaurant = this.db.getRestaurant(hashs[1]);
+        this.specialID = hashs[2];
 
         if (this.restaurant == null)
             this.doc.location.hash = 'home';
+
+        if (this.specialID == null)
+            this.restaurantInfoCP.setIcon(this.restaurant.iconPath);
+        else
+            this.restaurantInfoCP.setIcon(this.restaurant.foodItems[this.specialID].iconPath)
+
+        this.restaurantInfoCP.setRestaurant(this.restaurant);
+        this.restaurantMenuCP.setRestaurant(this.restaurant, this.specialID);
+        this.cartCP.clear();
         
         this.sidebar.appendChild(this.cartCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);

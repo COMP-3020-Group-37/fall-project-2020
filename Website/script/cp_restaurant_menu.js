@@ -1,45 +1,93 @@
 import { Component } from './component.js';
 
 export class RestaurantMenuCP extends Component {
-    constructor(doc) {
+    constructor(doc, cartCP) {
         super(doc);
+        this.cartCP = cartCP;
 
         this.element = doc.createElement('div');
         this.element.className = 'menu-options';
-        this.element.innerHTML = '<div>Appetizers</div><div>Main</div><div>Desserts</div><div>Drinks</div>';
 
-        this.element2 = doc.createElement('div')
-        this.element2.className = 'menu'
-
-        this.showFoodItem()
-        this.showFoodItem()
-        this.showFoodItem()
+        this.element2 = doc.createElement('div');
+        this.element2.className = 'menu';
     }
 
-    showFoodItem() {
+    setRestaurant(restaurant, specialID) {
+        this.element.innerHTML = '';
+        this.restaurant = restaurant;
+        this.specialID = specialID;
+
+        let categories = restaurant.categories;
+
+        this.categoryElements = [];
+
+        for (let i = 0; i < categories.length; i++) {
+            let categoryElement = this.doc.createElement('div');
+            categoryElement.innerHTML = categories[i].name
+
+            categoryElement.addEventListener('click', (event) => {
+                this.showFoodCategory(i);
+            });
+
+            this.element.appendChild(categoryElement);
+        }
+
+        if (specialID == null) {
+            this.showFoodCategory(0);
+        } else {
+            let categoryID = restaurant.categoriesMap.get(restaurant.foodItems[specialID].category);
+            this.showFoodCategory(categoryID);
+        }
+    }
+
+    showFoodCategory(categoryID) {
+        this.element2.innerHTML = '';
+        
+        let foodItems = this.restaurant.categories[categoryID].foodItems;
+
+        foodItems.forEach((foodItem) => {
+            this.showFoodItem(foodItem);
+        });
+    }
+
+    showFoodItem(foodItem) {
         let foodImage = this.doc.createElement('div');
         foodImage.className = 'menu_item_image';
-        foodImage.innerHTML = '<img src="images/restaurants//aw/burger1.jpg" class="menu_image">';
+        foodImage.innerHTML = '<img src="' + foodItem.iconPath + '" class="menu_image">';
         this.element2.appendChild(foodImage);
 
         let foodDescription = this.doc.createElement('div');
         foodDescription.className = 'menu_item_background';
-        foodDescription.innerHTML = 'Best Burger - Beef patite, pickels, onion, mayo, and ketchop';
+        foodDescription.innerHTML = foodItem.name + " | " + foodItem.description;
         this.element2.appendChild(foodDescription);
 
         let foodAdder = this.doc.createElement('div');
         foodAdder.className = 'menu_item_background';
-        foodAdder.innerHTML = '<button class="add_remove_item">+</button>';
+
+        let addButton = this.doc.createElement('i');
+        addButton.className = 'fa fa-plus btn-icon';
+
+        addButton.addEventListener('click', (event) => {
+            this.cartCP.addCartItem(foodItem);
+        });
+
+        foodAdder.appendChild(addButton);
         this.element2.appendChild(foodAdder);
 
         let foodCost = this.doc.createElement('div');
         foodCost.className = 'menu_item_background';
-        foodCost.innerHTML = '$5.00';
+        foodCost.innerHTML = '$' + foodItem.price + '.00';
         this.element2.appendChild(foodCost);
+
+        let stars = ''
+        for (let i = 0; i < foodItem.rating; i++) {
+            stars += '<i class="fa fa-star"></i>'
+        }
 
         let foodReview = this.doc.createElement('div');
         foodReview.className = 'menu_item_background';
-        foodReview.innerHTML = '<i class="fa fa-star"></i>';
+        foodReview.innerHTML = stars;
+
         this.element2.appendChild(foodReview);
     }
 

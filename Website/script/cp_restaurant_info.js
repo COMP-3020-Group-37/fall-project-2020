@@ -52,4 +52,12 @@ export class RestaurantInfoCP extends Component {
       this.description.appendChild(this.restaurantName);
       this.description.appendChild(this.extraInfo);
     }
+
+    setRestaurant(restaurant) {
+      this.restaurantName.innerHTML = restaurant.name;
+    }
+
+    setIcon(iconPath) {
+      this.special.innerHTML = '<img src="' + iconPath + '" class="special_img">';
+    }
 }
