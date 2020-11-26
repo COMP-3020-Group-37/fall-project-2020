@@ -64,13 +64,18 @@ export class RestaurantMenuCP extends Component {
         let foodAdder = this.doc.createElement('div');
         foodAdder.className = 'menu_item_background';
 
-        let addButton = this.doc.createElement('i');
-        addButton.className = 'fa fa-plus btn-icon';
+        let addButton = this.doc.createElement('button');
+        addButton.type = 'button';
+        addButton.className= 'add-button'
+
+        let addIcon = this.doc.createElement('i');
+        addIcon.className = 'fa fa-plus btn-icon';
 
         addButton.addEventListener('click', (event) => {
             this.cartCP.addCartItem(foodItem);
         });
 
+        addButton.appendChild(addIcon);
         foodAdder.appendChild(addButton);
         this.element2.appendChild(foodAdder);
 
