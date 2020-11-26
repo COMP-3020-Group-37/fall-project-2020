@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="module" src="app.js" defer></script>
+  <script src="script/display_functions.js"></script>
   <title>Order Food</title>
 </head>
 
@@ -19,7 +20,7 @@
       <button id="sidebar_toggle" class="sidebar-toggle"><i class="fa fa-bars"></i></button>
       <a href="index.html"><img class="logo" src="images/Logos/logo.png" alt="logo" height="70px"></a>
       <div class="address">
-        <button class="location" onclick="document.getElementById('location').style.display='block'"
+        <button id='location-button'class="location" type='button' onclick="openPopUpID('location')"
           style="width:auto;">Your Location<i class="fa fa-chevron-down"></i> </button>
       </div>
 
@@ -30,13 +31,6 @@
       <button id="search_sort" type='button' class="search_sort" onclick="openSortMenu()">Sort
         <i class="fa fa-chevron-down"></i>
       </button>
-      <div class="dropdown">
-        <div id="sort-options" class="dropdown-content">
-          <button id="sort-distance" class="btn">Distance</button>
-          <button id="sort-price" class="btn">Price</button>
-          <button id="sort-rating" class="btn"> Rating</button>
-        </div>
-      </div>
     </form>
 
     <nav class="header-box-3">
@@ -55,9 +49,8 @@
         <div class="location" style="cursor:initial;">Enter Your Address</div>
       </div>
       <div class="container">
-        <input type="text" id="location" name="location"><br><br>
-        <input class="popup_button btn-submit" type="submit" value="Find Restaurants in Your Area"
-          onclick="closePopUpID('location')">
+        <input type="text" id="location-input" name="location"><br><br>
+        <input class="popup_button btn-submit" type="submit" value="Find Restaurants in Your Area" onclick="closePopUpID('location')">
       </div>
     </form>>
   </div>
