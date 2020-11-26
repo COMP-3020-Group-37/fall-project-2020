@@ -8,7 +8,7 @@ export class StateHome extends State {
     constructor(wd, doc, db) {
         super('#home', wd, doc, db);
 
-        this.accountNavCP = new AccountNavCP(doc);
+        this.accountNavCP = new AccountNavCP(doc, db, this, db.categories);
         this.categoriesCP = new CategoriesCP(doc, this, db.categories);
         this.policyNavCP = new PolicyNavCP(doc);
 
@@ -20,14 +20,17 @@ export class StateHome extends State {
         doc.getElementById('sort-distance').addEventListener('click', () => {
             this.sortState = 'distance';
             this.itemSetUpdate();
+            doc.getElementById('sort-options').classList.toggle('show');
         });
         doc.getElementById('sort-price').addEventListener('click', () => {
             this.sortState = 'price';
             this.itemSetUpdate();
+            doc.getElementById('sort-options').classList.toggle('show');
         });
         doc.getElementById('sort-rating').addEventListener('click', () => {
             this.sortState = 'rating';
             this.itemSetUpdate();
+            doc.getElementById('sort-options').classList.toggle('show');
         });
     }
 
@@ -37,6 +40,7 @@ export class StateHome extends State {
         this.main.innerHTML += '<section id="food-display" class="food-display"></section>'
         this.foodDisplay = this.doc.getElementById('food-display')
 
+        this.displayHome();
         this.itemSetUpdate();
 
         this.sidebar.appendChild(this.accountNavCP.element);
@@ -75,12 +79,29 @@ export class StateHome extends State {
             let element = itemCP.element;
 
             element.addEventListener('click', () => {
-                let itemID = item.restaurant.getFoodItemIndex(item);
-                this.doc.location.hash = "view/" + item.restaurant.name.replace(/\s/g, '') + '/' + itemID;
+                if (this.db.yourLocation) {
+                    let itemID = item.restaurant.getFoodItemIndex(item);
+                    this.doc.location.hash = "view/" + item.restaurant.name.replace(/\s/g, '') + '/' + itemID;
+                }
+                else {
+                    alert("You first need to enter your address");
+                }
             });
 
             this.foodDisplay.appendChild(element);
         });
+    }
+
+    displayHome() {
+        this.accountNavCP.selectHome();
+    }
+
+    clearAccountNav() {
+        this.accountNavCP.clearSelected();
+    }
+
+    clearCategories() {
+        this.categoriesCP.clearSelected();
     }
 
     itemSetOrderRatingAsc() {

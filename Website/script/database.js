@@ -45,7 +45,6 @@ export class Database {
         this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/burger1.jpg", 7, 5, "Burgers"));
         this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/burger2.jpg", 8, 4, "Burgers"));
         this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/burger3.jpg", 9, 3, "Burgers"));
-        this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/chickenNuggets.png", 8, 5, "Chicken"));
         this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/coke.jpg", 2, 5, "Drinks"));
         this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/fries.jpg", 2, 5, "Fries"));
         this.restaurants[0].addFoodItem(new FoodItem("McDonalds", 'description', "images/restaurants/mcdonalds/icecream.jpg", 3, 5, "Desert"));
@@ -69,7 +68,7 @@ export class Database {
         this.restaurants[2].addFoodItem(new FoodItem("Boston Pizza", 'description', "images/restaurants/bostonpizza/pizza5.jpg", 3, 5, "Pizzas"));
 
         //pizza hut
-        this.restaurants[3].addFoodItem(new FoodItem("Pizza Hut", 'description', "images/restaurants/pizzahut/garlicbread.jpg", 7, 5, "Bread"));
+        this.restaurants[3].addFoodItem(new FoodItem("Pizza Hut", 'description', "images/restaurants/pizzahut/garlicbread.jpg", 7, 5, "Breakfast"));
         this.restaurants[3].addFoodItem(new FoodItem("Pizza Hut", 'description', "images/restaurants/pizzahut/pepsi.jpg", 8, 4, "Drinks"));
         this.restaurants[3].addFoodItem(new FoodItem("Pizza Hut", 'description', "images/restaurants/pizzahut/pizza.jpg", 9, 3, "Pizzas"));
         this.restaurants[3].addFoodItem(new FoodItem("Pizza Hut", 'description', "images/restaurants/pizzahut/pizza1.jpg", 8, 5, "Pizzas"));
@@ -97,7 +96,7 @@ export class Database {
         this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", 'description',  "images/restaurants/falafel/falafel2.jpg", 6, 4, "Salads"));
         this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", 'description',  "images/restaurants/falafel/falafel3.jpg", 5, 4, "Desert"));
         this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", 'description',  "images/restaurants/falafel/falafel4.jpg", 4, 4, "Wraps"));
-        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", 'description',  "images/restaurants/falafel/falafel5.jpg", 8, 4, "Breakfasts"));
+        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", 'description',  "images/restaurants/falafel/falafel5.jpg", 8, 4, "Breakfast"));
 
         //Freshii
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'description',  "images/restaurants/freshii/freshii1.jpg", 5, 4, "Salads"));
@@ -124,10 +123,10 @@ export class Database {
 
         //Smitty
         this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty1.jpg",5,4,"Salads"));
-        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty2.jpg",8,4,"Breakfasts"));
-        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty3.jpg",8,3,"Breakfasts"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty2.jpg",8,4,"Breakfast"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty3.jpg",8,3,"Breakfast"));
         this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty4.jpg",12,5,"Wings"));
-        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty5.jpg",6,4,"Breakfasts"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty5.jpg",6,4,"Breakfast"));
         this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty6.jpg",7,4,"Burgers"));
 
         //Subway
@@ -174,10 +173,10 @@ export class Database {
         this.restaurants[15].addFoodItem(new FoodItem("Taco Del Mar", 'description', "images/restaurants/tacodel/tacodel7.jpg",6,4,"Wraps"));
 
         //Tim Hortons
-        this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh1.jpg",10,4,"Breakfasts"));
+        this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh1.jpg",10,4,"Breakfast"));
         this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh2.jpg",4,4,"Drinks"));
-        this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh3.jpg",8,4,"Breakfasts"));
-        this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh4.jpg",10,5,"Breakfasts"));
+        this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh3.jpg",8,4,"Breakfast"));
+        this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh4.jpg",10,5,"Breakfast"));
         this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh5.jpg",2,4,"Desert"));
         this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh6.jpg",3,4,"Drinks"));
         this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh7.jpg",2,4,"Desert"));
@@ -186,7 +185,7 @@ export class Database {
         this.restaurants[16].addFoodItem(new FoodItem("Tim Hortons", 'description', "images/restaurants/timhorton/timh10.jpg",3,4,"Drinks"));
 
         //Wendy's
-        this.restaurants[17].addFoodItem(new FoodItem("Wendy's", 'description', "images/restaurants/windy/windy1.jpg",5,4,"Breakfasts"));
+        this.restaurants[17].addFoodItem(new FoodItem("Wendy's", 'description', "images/restaurants/windy/windy1.jpg",5,4,"Breakfast"));
         this.restaurants[17].addFoodItem(new FoodItem("Wendy's", 'description', "images/restaurants/windy/windy2.jpg",3,4,"Fries"));
         this.restaurants[17].addFoodItem(new FoodItem("Wendy's", 'description', "images/restaurants/windy/windy3.jpg",4,4,"Drinks"));
         this.restaurants[17].addFoodItem(new FoodItem("Wendy's", 'description', "images/restaurants/windy/windy4.jpg",5,5,"Burgers"));
@@ -255,9 +254,29 @@ export class Database {
             new Account("admin", "password"),
         ];
 
-        this.accounts[0].favourite(this.restaurants[0]);
-        this.accounts[0].favourite(this.restaurants[1]);
-        this.accounts[0].favourite(this.restaurants[2]);
+        this.accounts[0].favourite(this.restaurants[4]);
+        this.accounts[0].favourite(this.restaurants[5]);
+        this.accounts[0].favourite(this.restaurants[6]);
+
+        // ----- Set Popular -----
+
+        this.popular = [];
+
+        for (let i = 0; i < this.foodItems.length; i++) {
+            this.popular.push(this.foodItems[i]);
+        }
+
+        for (let i = 0; i < this.popular.length; i++) {
+            let ranId = Math.floor(Math.random() * this.popular.length);
+            
+            let tmp = this.popular[i];
+            this.popular[i] = this.popular[ranId];
+            this.popular[ranId] = tmp;
+        }
+
+        for (let i = 0; i < this.popular.length - 15; i++) {
+            this.popular.shift(); 
+        }
     }
 
     getRestaurant(name) {
@@ -267,4 +286,6 @@ export class Database {
                 return rest[i];
         }
     }
+
+    
 }
