@@ -68,7 +68,6 @@ locationSubmit.addEventListener('click', (event) => {
         database.yourLocation = value;
         locationButton.innerHTML = value.substring(0, 14) + '<i class="fa fa-chevron-down"></i>';
     }
-    console.log(locationInput.value);
 });
 
 const usernameLabel = document.getElementById('username-display');
