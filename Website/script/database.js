@@ -85,6 +85,39 @@ export class Database {
         this.restaurants[4].addFoodItem(new FoodItem("A&W", 'description', "images/restaurants/aw/fries3.png", 5, 5, "Fries"));
         this.restaurants[4].addFoodItem(new FoodItem("A&W", 'description', "images/restaurants/aw/rootBeer.png", 2, 4, "Drinks"));
 
+        //Earls Kitchen Bar
+        this.restaurants[5].addFoodItem(new FoodItem("Earls Kitchen Bar", "images/restaurants/earls/Earl1.jpg", 7, 4, "Salads"));
+        this.restaurants[5].addFoodItem(new FoodItem("Earls Kitchen Bar", "images/restaurants/earls/Earl2.jpg", 7, 3, "Salads"));
+        this.restaurants[5].addFoodItem(new FoodItem("Earls Kitchen Bar", "images/restaurants/earls/Earl3.jpg", 5, 4, "Burgers"));
+        this.restaurants[5].addFoodItem(new FoodItem("Earls Kitchen Bar", "images/restaurants/earls/Earl4.jpg", 4, 4, "Fries"));
+        this.restaurants[5].addFoodItem(new FoodItem("Earls Kitchen Bar", "images/restaurants/earls/Earl5.jpg", 6, 4, "Wings"));
+
+        //Falafel Place
+        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", "images/restaurants/falafel/falafel1.jpg", 8, 3, "Wraps"));
+        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", "images/restaurants/falafel/falafel2.jpg", 6, 4, "Salads"));
+        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", "images/restaurants/falafel/falafel3.jpg", 5, 4, "Desert"));
+        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", "images/restaurants/falafel/falafel4.jpg", 4, 4, "Wraps"));
+        this.restaurants[6].addFoodItem(new FoodItem("Falafel Place", "images/restaurants/falafel/falafel5.jpg", 8, 4, "Breakfasts"));
+
+        //Freshii
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii1.jpg", 5, 4, "Salads"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii2.jpg", 6, 5, "Salads"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii3.jpg", 5, 4, "Salads"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii4.jpg", 5, 4, "Wraps"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii5.jpg", 7, 5, "Salads"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii6.jpg", 6, 4, "Salads"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", "images/restaurants/freshii/freshii7.jpg", 4, 3, "Salads"));
+
+        //Montanas
+        this.restaurants[8].addFoodItem(new FoodItem("Montanas", "images/restaurants/montanas/montana1.jpg", 8, 4, "Burgers"));
+        this.restaurants[8].addFoodItem(new FoodItem("Montanas", "images/restaurants/montanas/montana2.jpg", 8, 3, "Burgers"));
+        this.restaurants[8].addFoodItem(new FoodItem("Montanas", "images/restaurants/montanas/montana3.jpg", 8, 5, "Burgers"));
+        this.restaurants[8].addFoodItem(new FoodItem("Montanas", "images/restaurants/montanas/montana4.jpg", 9, 4, "Burgers"));
+        this.restaurants[8].addFoodItem(new FoodItem("Montanas", "images/restaurants/montanas/montana5.jpg", 7, 5, "Burgers"));
+
+        //Pita Pit
+
+
         //Smitty
         this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty1.jpg",5,4,"vegetable salad"));
         this.restaurants[10].addFoodItem(new FoodItem("Smitty's", 'description', "images/restaurants/smitty/smitty2.jpg",8,4,"Breakfasts"));
