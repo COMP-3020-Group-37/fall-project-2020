@@ -10,5 +10,6 @@ export class FoodItem {
 
     setRestaurant(restaurant) {
         this.restaurant = restaurant;
+        this.distance = restaurant.distance;
     }
 }

@@ -1,6 +1,6 @@
 import { Database } from './script/database.js';
 import { StateMachine } from './script/statemachine.js'
-
+import { Account } from './script/data_account.js';
 
 const r = document.querySelector(':root');
 
@@ -11,7 +11,7 @@ const sidebar = document.getElementById('sidebar')
 const sidebarIcon = document.getElementById('sidebar_toggle');
 const sidebarWidth = r.style.getPropertyValue('--sidebar-width');
 
-const enableStateMachine = true; // use to toggle statemachine mostly for testing html
+const enableStateMachine = false; // use to toggle statemachine mostly for testing html
 
 let sideBarHidden = false;
 let stateMachine = null;
@@ -69,6 +69,91 @@ locationSubmit.addEventListener('click', (event) => {
         locationButton.innerHTML = value.substring(0, 14) + '<i class="fa fa-chevron-down"></i>';
     }
     console.log(locationInput.value);
+});
+
+const usernameLabel = document.getElementById('username-display');
+const buttonLogout = document.getElementById('btn-logout');
+const buttonSignin = document.getElementById('btn-signin');
+const buttonRegister = document.getElementById('btn-register');
+
+const registerForm = document.getElementById('register');
+const registerUsername = document.getElementById('register-username');
+const registerPassword= document.getElementById('register-password');
+const registerPassword2 = document.getElementById('register-password-2');
+const registerSubmit = document.getElementById('register-submit');
+registerSubmit.addEventListener('click', (event) => {
+    let accounts = database.accounts;
+    let username = registerUsername.value;
+    let password = registerPassword.value;
+    let password2 = registerPassword2.value;
+
+    for (let i = 0; i < accounts.length; i++) {
+        let account = accounts[i];
+
+        if (account.username == username) {
+            alert('Username is already taken');
+            return false;
+        }
+
+        if (password != password2) {
+            alert('Passwords do not match');
+            return false;
+        }
+    }
+
+    let newAccount = new Account(username, password)
+    accounts.push(newAccount);
+    loginForm.style.display = 'none';
+    database.currentAccount = newAccount;
+    buttonSignin.style.display = 'none';
+    buttonRegister.style.display = 'none';
+
+    usernameLabel.innerHTML = newAccount.username;
+    usernameLabel.style.display = '';
+    buttonLogout.style.display = '';
+});
+
+const loginForm = document.getElementById('signin');
+const loginUsername= document.getElementById('login-username');
+const loginPassword = document.getElementById('login-password');
+const loginSubmit = document.getElementById('login-submit');
+loginSubmit.addEventListener('click', (event) => {
+    let accounts = database.accounts;
+    let username = loginUsername.value;
+    let password = loginPassword.value;
+    let foundAccount = null;
+
+    for (let i = 0; i < accounts.length && foundAccount == null; i++) {
+        let account = accounts[i];
+
+        if (account.username == username && account.password == password) {
+            foundAccount = account;
+        }
+    }
+
+    if (foundAccount) {
+        loginForm.style.display = 'none';
+        database.currentAccount = foundAccount;
+        buttonSignin.style.display = 'none';
+        buttonRegister.style.display = 'none';
+
+        usernameLabel.innerHTML=foundAccount.username;
+        usernameLabel.style.display = '';
+        buttonLogout.style.display = '';
+    }
+    else {
+        alert("Did not find an account with that username and password");
+        loginPassword.value = '';
+    }
+});
+
+buttonLogout.addEventListener('click', (event) => {
+    database.currentAccount = null;
+
+    buttonSignin.style.display='';
+    buttonRegister.style.display='';
+    usernameLabel.style.display='none';
+    buttonLogout.style.display='none';
 });
 
 if (enableStateMachine) {

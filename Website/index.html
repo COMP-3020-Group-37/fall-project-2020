@@ -26,29 +26,27 @@
       </div>
     </div>
 
-    <form class="header-box-2">
+    <div id='search-header' class="header-box-2">
       <input id="search" class="search" type="search" name="search" placeholder="search">
       <button type="button" id="search_sort" class="search_sort" onclick="openSortMenu()">Sort
         <i class="fa fa-chevron-down"></i>
       </button>
       <div class="dropdown">
         <div id="sort-options" class="dropdown-content">
-          <button class="btn">Distance</button>
-          <button class="btn">Price</button>
-          <button class="btn"> Rating</button>
+          <button id="sort-distance" class="btn">Distance</button>
+          <button id="sort-price" class="btn">Price</button>
+          <button id="sort-rating" class="btn"> Rating</button>
         </div>
       </div>
-    </form>
+    </div>
 
 
 
     <nav class="header-box-3">
-      <button class="btn" type='button' onclick="openPopUpID('signin')" style="width:auto;">
-        Sign-In
-      </button>
-      <button class="btn" type='button' onclick="openPopUpID('register')" style="width:auto;">
-        Register
-      </button>
+      <h3 id="username-display" class="username-display" style="display: none;">Username</h2>
+      <button id="btn-logout" class="btn" style="display: none;">Logout</button>
+      <button id="btn-signin" class="btn" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">Sign-In</button>
+      <button id="btn-register" class="btn" onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register</button>
     </nav>
   </header>
 
@@ -77,24 +75,16 @@
       </div>
 
       <div class="container">
-        <label for="uname">
-          <b>Username</b>
-        </label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label><b>Username</b></label>
+        <input id='register-username' name="username" type="text" placeholder="Enter Username" required>
 
-        <label for="psw">
-          <b>Password</b>
-        </label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label><b>Password</b></label>
+        <input id='register-password' name="password1" type="password" placeholder="Enter Password" required>
 
-        <label for="psw">
-          <b>Confirm password</b>
-        </label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label><b>Confirm password</b></label>
+        <input id='register-password-2' name="password2" type="password" placeholder="Enter Password" required>
 
-        <button class="popup_button btn-submit" type="submit" onclick="closePopUpID('register')">
-          Register
-        </button>
+        <button id='register-submit' name="submit" class="popup_button btn-submit" type="submit" onclick="document.getElementById('register').style.display='none'">Register</button>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
@@ -114,17 +104,13 @@
       </div>
 
       <div class="container">
-        <label for="uname">
-          <b>Username</b>
-        </label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label><b>Username</b></label>
+        <input id='login-username' name="username" type="text" placeholder="Enter Username" required>
 
-        <label for="psw">
-          <b>Password</b>
-        </label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label><b>Password</b></label>
+        <input id='login-password' name="password1"  type="password" placeholder="Enter Password" required>
 
-        <button type="submit" class="popup_button" onclick="closePopUpID('signin')">Login</button>
+        <button id='login-submit' name="submit" class="popup_button" type="submit">Login</button>
         <label>
           <input type="checkbox" name="remember">
           Remember me
