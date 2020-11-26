@@ -20,14 +20,17 @@ export class StateHome extends State {
         doc.getElementById('sort-distance').addEventListener('click', () => {
             this.sortState = 'distance';
             this.itemSetUpdate();
+            doc.getElementById('sort-options').classList.toggle('show');
         });
         doc.getElementById('sort-price').addEventListener('click', () => {
             this.sortState = 'price';
             this.itemSetUpdate();
+            doc.getElementById('sort-options').classList.toggle('show');
         });
         doc.getElementById('sort-rating').addEventListener('click', () => {
             this.sortState = 'rating';
             this.itemSetUpdate();
+            doc.getElementById('sort-options').classList.toggle('show');
         });
     }
 
