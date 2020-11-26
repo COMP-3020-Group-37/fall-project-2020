@@ -9,3 +9,14 @@ function openSortMenu()
     document.getElementById('sort-options').classList.toggle('show');
 }
 
+function openPopUpID(id)
+{
+    document.getElementById(id).style.display='block';
+}
+
+function closePopUpID(id)
+{
+    document.getElementById(id).style.display='none';
+}
+
+
