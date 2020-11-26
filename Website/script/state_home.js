@@ -14,6 +14,21 @@ export class StateHome extends State {
 
         this.itemsSet = this.db.foodItems;
         this.itemsSetDefault = this.db.foodItems;
+        
+        this.sortState = 'rating'
+
+        doc.getElementById('sort-distance').addEventListener('click', () => {
+            this.sortState = 'distance';
+            this.itemSetUpdate();
+        });
+        doc.getElementById('sort-price').addEventListener('click', () => {
+            this.sortState = 'price';
+            this.itemSetUpdate();
+        });
+        doc.getElementById('sort-rating').addEventListener('click', () => {
+            this.sortState = 'rating';
+            this.itemSetUpdate();
+        });
     }
 
     onEnter() {
@@ -40,7 +55,20 @@ export class StateHome extends State {
 
     itemSetUpdate() {
         this.foodDisplay.innerHTML = '';
-        this.itemSetOrderRatingDesc();
+    
+        switch(this.sortState) {
+            case 'rating':
+                this.itemSetOrderRatingDesc();
+                break;
+            case 'distance':
+                this.itemSetOrderDistanceAsc();
+                break;
+            case 'price':
+                this.itemSetOrderPriceAsc();
+                break;
+            default:
+                console.log("Invalid sortState " + this.sortState);
+        }
 
         this.itemsSet.forEach((item) => {
             let itemCP = new FoodItemCP(this.doc, item);
