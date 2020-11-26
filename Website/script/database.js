@@ -83,6 +83,15 @@ export class Database {
         this.restaurants[4].addFoodItem(new FoodItem("A&W", "images/restaurants/aw/fries3.png", 5, 5, "Fries"));
         this.restaurants[4].addFoodItem(new FoodItem("A&W", "images/restaurants/aw/rootBeer.png", 2, 4, "Drinks"));
 
+        //Smitty
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", "images/restaurant/smitty/smitty1.jpg",5,4,"vegetable salad"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", "images/restaurant/smitty/smitty2.jpg",8,4,"Breakfasts"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", "images/restaurant/smitty/smitty3.jpg",8,3,"Breakfasts"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", "images/restaurant/smitty/smitty4.jpg",12,5,"Wings"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", "images/restaurant/smitty/smitty5.jpg",6,4,"Breakfasts"));
+        this.restaurants[10].addFoodItem(new FoodItem("Smitty's", "images/restaurant/smitty/smitty6.jpg",7,4,"Burgers"));
+
+
         //Sushi Jet
         this.restaurants[14].addFoodItem(new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/dumplings.jpg", 3, 5, "Dumplings"));
         this.restaurants[14].addFoodItem(new FoodItem("Sushi Jet", "images/restaurants/sushi_jet/iced_teas.jpg", 2, 4, "Drinks"));
