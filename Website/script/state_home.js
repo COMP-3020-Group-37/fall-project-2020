@@ -79,8 +79,13 @@ export class StateHome extends State {
             let element = itemCP.element;
 
             element.addEventListener('click', () => {
-                let itemID = item.restaurant.getFoodItemIndex(item);
-                this.doc.location.hash = "view/" + item.restaurant.name.replace(/\s/g, '') + '/' + itemID;
+                if (this.db.yourLocation) {
+                    let itemID = item.restaurant.getFoodItemIndex(item);
+                    this.doc.location.hash = "view/" + item.restaurant.name.replace(/\s/g, '') + '/' + itemID;
+                }
+                else {
+                    alert("You first need to enter your address");
+                }
             });
 
             this.foodDisplay.appendChild(element);
