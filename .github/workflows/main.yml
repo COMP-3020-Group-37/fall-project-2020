@@ -18,4 +18,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: ${{ github.actor }} created a ${{ github.event_name }} with ${{ github.head_ref }}.
+        args: ${{ github.actor }} created a ${{ github.event_name }} for branch':' ${{ github.ref }}.
