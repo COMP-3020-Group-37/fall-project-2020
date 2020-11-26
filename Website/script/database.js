@@ -173,9 +173,29 @@ export class Database {
             new Account("admin", "password"),
         ];
 
-        this.accounts[0].favourite(this.restaurants[0]);
-        this.accounts[0].favourite(this.restaurants[1]);
-        this.accounts[0].favourite(this.restaurants[2]);
+        this.accounts[0].favourite(this.restaurants[4]);
+        this.accounts[0].favourite(this.restaurants[5]);
+        this.accounts[0].favourite(this.restaurants[6]);
+
+        // ----- Set Popular -----
+
+        this.popular = [];
+
+        for (let i = 0; i < this.foodItems.length; i++) {
+            this.popular.push(this.foodItems[i]);
+        }
+
+        for (let i = 0; i < this.popular.length; i++) {
+            let ranId = Math.floor(Math.random() * this.popular.length);
+            
+            let tmp = this.popular[i];
+            this.popular[i] = this.popular[ranId];
+            this.popular[ranId] = tmp;
+        }
+
+        for (let i = 0; i < this.popular.length - 15; i++) {
+            this.popular.shift(); 
+        }
     }
 
     getRestaurant(name) {
@@ -185,4 +205,6 @@ export class Database {
                 return rest[i];
         }
     }
+
+    
 }

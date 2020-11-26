@@ -13,6 +13,10 @@ export class CategoriesCP extends Component {
         this.list = doc.createElement('ul');
         this.list.className = 'links-column'
 
+        this.element.appendChild(this.heading);
+        this.element.appendChild(this.list);
+
+        
         this.activeCategory = null;
 
         this.categories = []
@@ -29,7 +33,7 @@ export class CategoriesCP extends Component {
 
                 if (this.activeCategory == category) {
                     this.activeCategory = '';
-                    this.home.itemsSet = this.home.itemsSetDefault;
+                    this.home.displayHome();
                 }
                 else {
                     category.className = 'category-selected';
@@ -38,14 +42,12 @@ export class CategoriesCP extends Component {
                     this.home.itemsSet = categoryData.foodItems;
                 }
 
+                this.home.clearAccountNav();
                 this.home.itemSetUpdate();
             });
 
             this.list.appendChild(category);
         });
-
-        this.element.appendChild(this.heading);
-        this.element.appendChild(this.list);
     }
 
     clearSelected() {

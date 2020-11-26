@@ -8,7 +8,7 @@ export class StateHome extends State {
     constructor(wd, doc, db) {
         super('#home', wd, doc, db);
 
-        this.accountNavCP = new AccountNavCP(doc);
+        this.accountNavCP = new AccountNavCP(doc, db, this, db.categories);
         this.categoriesCP = new CategoriesCP(doc, this, db.categories);
         this.policyNavCP = new PolicyNavCP(doc);
 
@@ -40,6 +40,7 @@ export class StateHome extends State {
         this.main.innerHTML += '<section id="food-display" class="food-display"></section>'
         this.foodDisplay = this.doc.getElementById('food-display')
 
+        this.displayHome();
         this.itemSetUpdate();
 
         this.sidebar.appendChild(this.accountNavCP.element);
@@ -84,6 +85,18 @@ export class StateHome extends State {
 
             this.foodDisplay.appendChild(element);
         });
+    }
+
+    displayHome() {
+        this.accountNavCP.selectHome();
+    }
+
+    clearAccountNav() {
+        this.accountNavCP.clearSelected();
+    }
+
+    clearCategories() {
+        this.categoriesCP.clearSelected();
     }
 
     itemSetOrderRatingAsc() {
