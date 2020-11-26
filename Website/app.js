@@ -1,6 +1,7 @@
 import { Database } from './script/database.js';
 import { StateMachine } from './script/statemachine.js'
 
+
 const r = document.querySelector(':root');
 
 const main = document.getElementById('main')
@@ -57,6 +58,8 @@ window.addEventListener('click', (event) => {
         modalLocation.style.display = "none";
 });
 
+<<<<<<< HEAD
+=======
 const locationInput = document.getElementById('location-input');
 const locationSubmit = document.getElementById('location-submit');
 const locationButton = document.getElementById('location-button');
@@ -70,6 +73,7 @@ locationSubmit.addEventListener('click', (event) => {
     console.log(locationInput.value);
 });
 
+>>>>>>> master
 if (enableStateMachine) {
 
     main.innerHTML = '';
@@ -82,5 +86,11 @@ if (enableStateMachine) {
         stateMachine.changeToState(hashs[0]);
     }, false);
 
+<<<<<<< HEAD
+    stateMachine = new StateMachine(document, database);
+}
+
+=======
     document.location.hash = 'home'
 }
+>>>>>>> master
