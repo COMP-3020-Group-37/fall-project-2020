@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="app.js" defer></script>
+    <script src="script/display_functions.js"></script>
     <title>Order Food</title>
 </head>
 
@@ -20,8 +21,8 @@
             <button id="sidebar_toggle" class="sidebar-toggle"><i class="fa fa-bars"></i></button>
             <a href="index.html#home"><img class="logo" src="images/Logos/logo.png" alt="logo" height="70px"></a>
             <div class="address">
-                <button id='location-button' class="location"
-                    onclick="document.getElementById('location').style.display='block'" style="width:auto;">Your
+                <button id='location-button' class="location" type='button'
+                    onclick="document.openPopUpID('location')" style="width:auto;">Your
                     Location<i class="fa fa-chevron-down"></i> </button>
             </div>
 
@@ -29,29 +30,30 @@
 
         <form class="header-box-2">
             <input id="search" class="search" type="search" name="search" placeholder="search">
-            <button id="search_sort" class="search_sort">Sort<i class="fa fa-chevron-down"></i></button>
+            <button id="search_sort" class="search_sort" type='button' onclick="openSortMenu()">Sort
+                <i class="fa fa-chevron-down"></i>
+            </button>
         </form>
 
         <nav class="header-box-3">
-            <button class="btn" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">
-                Sign-In</button>
-            <button class="btn" onclick="document.getElementById('register').style.display='block'" style="width:auto;">
-                Register</button>
+            <button class="btn" type='button' onclick="openPopUpID('signin')" style="width:auto;">Sign-In</button>
+            <button class="btn" type='button' onclick="openPopUpID('register')" style="width:auto;">Register</button>
         </nav>
     </header>
 
     <div id="location" class="modal">
         <form class="modal-content anim-zoom" onsubmit="return false" action="close">
             <div class="titlecontainer">
-                <span onclick="document.getElementById('location').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
+                <span onclick="closePopUpID('location')" class="close"
+                    title="Close Modal">&times;
+                </span>
                 <div class="location" style="cursor:initial;">Enter Your Address</div>
             </div>
             <div class="container">
                 <input type="text" id="location-input" name="location"><br><br>
                 <input id='location-submit' class="popup_button btn-submit" type="submit"
                     value="Find Restaurants in Your Area"
-                    onclick="document.getElementById('location').style.display='none'">
+                    onclick="closePopUpID('location')">
             </div>
         </form>>
     </div>
@@ -59,7 +61,7 @@
     <div id="register" class="modal">
         <form class="modal-content anim-zoom" onsubmit="return false" action="close">
             <div class="titlecontainer">
-                <span onclick="document.getElementById('register').style.display='none'" class="close"
+                <span onclick="closePopUpID('register')" class="close"
                     title="Close Modal">&times;</span>
                 <div>REGISTER</div>
             </div>
@@ -75,11 +77,11 @@
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
                 <button class="popup_button btn-submit" type="submit"
-                    onclick="document.getElementById('register').style.display='none'">Register</button>
+                    onclick="closePopUpID('register')">Register</button>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('register').style.display='none'"
+                <button type="button" onclick="closePopUpID('register')"
                     class="popup_button cancelbtn">Cancel</button>
             </div>
         </form>
@@ -88,7 +90,7 @@
     <div id="signin" class="modal">
         <form class="modal-content anim-zoom" onsubmit="return false" action="close">
             <div class="titlecontainer">
-                <span onclick="document.getElementById('signin').style.display='none'" class="close"
+                <span onclick="closePopUpID('signin')" class="close"
                     title="Close Modal">&times;</span>
                 <div>SIGN IN</div>
             </div>
@@ -101,7 +103,7 @@
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
                 <button type="submit" class="popup_button"
-                    onclick="document.getElementById('signin').style.display='none'">Login</button>
+                    onclick="closePopUpID('signin')">Login</button>
                 <label>
                     <input type="checkbox" name="remember">
                     Remember me
@@ -109,7 +111,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('signin').style.display='none'"
+                <button type="button" onclick="closePopUpID('signin')"
                     class="popup_button cancelbtn">
                     Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
