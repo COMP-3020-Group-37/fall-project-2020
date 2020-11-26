@@ -1,6 +1,7 @@
 export class FoodItem {
-    constructor(name, iconPath, price, rating, category) {
+    constructor(name, description, iconPath, price, rating, category) {
         this.name = name;
+        this.description = description;
         this.iconPath = iconPath;
         this.price = price;
         this.rating = rating;
