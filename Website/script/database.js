@@ -16,12 +16,12 @@ export class Database {
         // ----- Set Restaurants -----
 
         this.restaurants = [
-            new Restaurant("McDonalds", "images/Logos/macdonalds_logo.png", "", 10),
-            new Restaurant("Burger King", "image/Logos/burger_king_logo.png", "", 5),
+            new Restaurant("McDonalds", "images/Logos/mcdonlads_logo.png", "", 10),
+            new Restaurant("Burger King", "images/Logos/burger_king_logo.png", "", 5),
             new Restaurant("Boston Pizza", "images/Logos/boston_pizza.png", "", 15),
             new Restaurant("Pizza Hut", "images/Logos/pizzahut.png", "", 20),
             new Restaurant("A&W", "images/Logos/a_w_logo.png", "", 12),
-            new Restaurant("Earls Kitchen Bar", "images/Logos/earls_kitchen_logo.", "", 6),
+            new Restaurant("Earls Kitchen Bar", "images/Logos/earls_kitchen_logo.png", "", 6),
             new Restaurant("Falafel Place", "images/Logos/falafel.png", "", 9),
             new Restaurant("Freshii", "images/Logos/freshii_logo.png", "", 18),
             new Restaurant("Montanas", "images/Logos/montanas_logo.png", "", 12),
@@ -31,11 +31,11 @@ export class Database {
             new Restaurant("Sushi Gozen", "images/Logos/sushigozen.png", "", 17),
             new Restaurant("Taco Time", "images/Logos/tacotime.jpg", "", 3),
             new Restaurant("Sushi Jet", "images/Logos/sushijet.jpg", "", 9),
-            new Restaurant("Taco Del Mar", "images/Logos/tacodelmar.jpg", "",11),
+            new Restaurant("Taco Del Mar", "images/Logos/tacoelmar.jpg", "",11),
             new Restaurant("Tim Hortons", "images/Logos/tims.png", "", 10),
             new Restaurant("Wendy's", "images/Logos/wendys.png", "", 15),
             new Restaurant("Aroma Bistro", "images/Logos/aroma.png", "", 5),
-            new Restaurant("Menchies Frozen Yogurt", "images/Logos/frozenyogurt.png", "", 15),
+            new Restaurant("Menchies Frozen Yogurt", "images/Logos/frozeyogurt.png", "", 15),
             new Restaurant("Sato Sushi", "images/Logos/satosushi.png", "", 14),
         ];
 
@@ -103,7 +103,7 @@ export class Database {
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Rice salad with avocado and beans',  "images/restaurants/freshii/freshii2.jpg", 6, 5, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Beet salad with carrots, quinoa, cheese, and cranberries',  "images/restaurants/freshii/freshii3.jpg", 5, 4, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'chicken wrap with pineapple and lettuce',  "images/restaurants/freshii/freshii4.jpg", 5, 4, "Wraps"));
-        this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Smoothie with banana, strawberry, and pineapple  ',  "images/restaurants/freshii/freshii5.jpg", 7, 5, "desert"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Smoothie with banana, strawberry, and pineapple  ',  "images/restaurants/freshii/freshii5.jpg", 7, 5, "Desert"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Rice noodle salad with tofu nd broccoli',  "images/restaurants/freshii/freshii6.jpg", 6, 4, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Rice salad wihh corn, avocado, beans, and tomato',  "images/restaurants/freshii/freshii7.jpg", 4, 3, "Salads"));
 
