@@ -50,9 +50,14 @@ export class StateView extends State {
         this.localtionBUtton.disabled = true;
         this.sortHeader.style.display = 'none';
 
+        this.totalAmount = this.doc.createElement('h2');
+        this.totalAmount.className = 'cart-total mg-top';
+        this.totalAmount.innerHTML = "Total: $0.00";
+        this.totalAmount.id = 'cart-total';
+
         let testButton = this.doc.createElement('button');
         testButton.innerHTML = 'Checkout';
-        testButton.className = 'btn'
+        testButton.className = 'btn mg-top'
 
         testButton.addEventListener('click', () => {
             let cartItems = [];
@@ -85,8 +90,11 @@ export class StateView extends State {
             this.doc.location.hash = 'home';
         });
 
+        this.sidebar.appendChild(this.totalAmount)
         this.sidebar.appendChild(testButton);
         this.sidebar.appendChild(backButton);
+
+        this.cartCP.updateCartTotal(this.totalAmount)
     }
 
     onUpdate() {

@@ -73,6 +73,7 @@ export class SideBarCartCP extends Component {
 
         itemtotal.innerHTML = '' + itemAmount;
         itemCost.innerHTML = '$' + (item.foodItem.price * itemAmount);
+        this.updateCartTotal();
       });
 
       itemadd.addEventListener('click', (event) => {
@@ -81,11 +82,34 @@ export class SideBarCartCP extends Component {
         item.total = itemAmount;
         itemtotal.innerHTML = '' + itemAmount;
         itemCost.innerHTML = '$' + (item.foodItem.price * itemAmount);
+        this.updateCartTotal();
       });
 
       item.appendChild(itemName);
       item.appendChild(itemCount);
       item.appendChild(itemCost);
       this.table.appendChild(item);
+      this.updateCartTotal();
+    }
+
+    updateCartTotal() {
+      let cartItems = [];
+      let cartItemsCount = [];
+
+      let cartElements = this.table.children;
+      for (let i = 0; i < cartElements.length; i++) {
+          let element = cartElements[i];
+          if (element.foodItem) {
+              cartItems.push(element.foodItem);
+              cartItemsCount.push(element.total)
+          }
+      }
+
+      let total = 0;
+      for (let i = 0; i < cartItems.length; i++) {
+        total += cartItems[i].price * cartItemsCount[i];
+      }
+
+      this.doc.getElementById("cart-total").innerHTML = 'Total: $' + total + '.00'
     }
 }

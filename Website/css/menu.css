@@ -167,3 +167,7 @@ text-align: center;
 .logoImg {
   border-radius: 50%;
 }
+
+.cart-total {
+  margin-left: 25px;
+}
