@@ -33,10 +33,11 @@ export class SideBarCartCP extends Component {
 
         this.table.appendChild(tableHeader);
     }
-
+    
     addCartItem(foodItem) {
       let item = this.doc.createElement('tr');
       item.foodItem = foodItem;
+      item.total = 1;
 
       let itemName = this.doc.createElement('td');
       itemName.innerHTML = foodItem.name;
@@ -63,10 +64,12 @@ export class SideBarCartCP extends Component {
       itemsub.addEventListener('click', (event) => {
         let itemAmount = Number(itemtotal.innerHTML) 
         itemAmount -= 1;
+        item.total = itemAmount;
 
         if (itemAmount == 0) {
           item.remove();
         }
+
 
         itemtotal.innerHTML = '' + itemAmount;
         itemCost.innerHTML = '$' + (item.foodItem.price * itemAmount);
@@ -75,6 +78,7 @@ export class SideBarCartCP extends Component {
       itemadd.addEventListener('click', (event) => {
         let itemAmount = Number(itemtotal.innerHTML) 
         itemAmount += 1;
+        item.total = itemAmount;
         itemtotal.innerHTML = '' + itemAmount;
         itemCost.innerHTML = '$' + (item.foodItem.price * itemAmount);
       });

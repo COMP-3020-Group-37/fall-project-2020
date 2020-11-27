@@ -36,6 +36,8 @@ export class StateHome extends State {
 
     onEnter() {
         let hashs = this.doc.location.hash.split("/");
+        this.db.cartItems = null;
+        this.db.cartItemsCount = null;
 
         this.main.innerHTML += '<section id="food-display" class="food-display"></section>'
         this.foodDisplay = this.doc.getElementById('food-display')

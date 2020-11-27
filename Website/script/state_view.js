@@ -35,7 +35,9 @@ export class StateView extends State {
 
         this.restaurantInfoCP.setRestaurant(this.restaurant);
         this.restaurantMenuCP.setRestaurant(this.restaurant, this.specialID);
-        this.cartCP.clear();
+
+        if (this.db.cartItemsCount == null)
+            this.cartCP.clear();
         
         this.sidebar.appendChild(this.cartCP.element);
         this.sidebar.appendChild(this.policyNavCP.element);
@@ -47,6 +49,34 @@ export class StateView extends State {
         this.root.style.setProperty('--sidebar-width', this.sidebarWidth);
         this.localtionBUtton.disabled = true;
         this.sortHeader.style.display = 'none';
+
+        let testButton = this.doc.createElement('button');
+        testButton.innerHTML = 'Checkout';
+
+        testButton.addEventListener('click', () => {
+            let cartItems = [];
+            let cartItemsCount = [];
+
+            let cartElements = this.cartCP.table.children;
+            for (let i = 0; i < cartElements.length; i++) {
+                let element = cartElements[i];
+                if (element.foodItem) {
+                    cartItems.push(element.foodItem);
+                    cartItemsCount.push(element.total)
+                }
+            }
+
+            if (cartItems.length > 0) {
+                this.db.cartItems = cartItems;
+                this.db.cartItemsCount = cartItemsCount;
+                this.doc.location.hash = "cart/" + this.restaurant.name.replace(/\s/g, '');
+            }
+            else {
+                alert("Your Cart is empty, you have nothing to buy.")
+            }
+        });
+
+        this.sidebar.appendChild(testButton);
     }
 
     onUpdate() {

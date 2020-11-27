@@ -21,6 +21,8 @@ export class RestaurantMenuCP extends Component {
 
         this.categoryElements = [];
 
+        this.specialFoodItem = null;
+        
         for (let i = 0; i < categories.length; i++) {
             let categoryElement = this.doc.createElement('div');
             categoryElement.innerHTML = categories[i].name
@@ -35,6 +37,7 @@ export class RestaurantMenuCP extends Component {
         if (specialID == null) {
             this.showFoodCategory(0);
         } else {
+            this.specialFoodItem = restaurant.foodItems[specialID];
             let categoryID = restaurant.categoriesMap.get(restaurant.foodItems[specialID].category);
             this.showFoodCategory(categoryID);
         }
@@ -50,7 +53,7 @@ export class RestaurantMenuCP extends Component {
         });
     }
 
-    showFoodItem(foodItem) {
+    showFoodItem(foodItem, special) {
         let foodImage = this.doc.createElement('div');
         foodImage.className = 'menu_item_image';
         foodImage.innerHTML = '<img src="' + foodItem.iconPath + '" class="menu_image">';
