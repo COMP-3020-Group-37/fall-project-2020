@@ -6,6 +6,10 @@
     margin: 10px;
 }
 
+.card:hover {
+    box-shadow: 5px 10px 10px 10px rgba(59, 57, 55, 0.911);
+}
+
 .card img {
     display: block;
     width: 100%;
