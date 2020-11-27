@@ -55,6 +55,8 @@ export class CheckoutCP extends Component {
         let itemTotalPrice = itemPrice * amount;
 
         let nameElement = this.doc.createElement('div');
+        nameElement.style.textAlign = "left";
+        nameElement.style.paddingLeft = "20px";
         nameElement.innerHTML = itemName;
 
         let amountElement = this.doc.createElement('div');
