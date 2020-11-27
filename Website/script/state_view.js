@@ -40,7 +40,7 @@ export class StateView extends State {
             this.cartCP.clear();
         
         this.sidebar.appendChild(this.cartCP.element);
-        this.sidebar.appendChild(this.policyNavCP.element);
+        //this.sidebar.appendChild(this.policyNavCP.element);
         this.main.appendChild(this.restaurantInfoCP.element);
         this.main.appendChild(this.restaurantMenuCP.element);
         this.main.appendChild(this.restaurantMenuCP.element2);
@@ -52,6 +52,7 @@ export class StateView extends State {
 
         let testButton = this.doc.createElement('button');
         testButton.innerHTML = 'Checkout';
+        testButton.className = 'btn'
 
         testButton.addEventListener('click', () => {
             let cartItems = [];
@@ -76,7 +77,16 @@ export class StateView extends State {
             }
         });
 
+        let backButton = this.doc.createElement('button');
+        backButton.innerHTML = 'Back';
+        backButton.className = 'btn';
+
+        backButton.addEventListener('click', () => {
+            this.doc.location.hash = 'home';
+        });
+
         this.sidebar.appendChild(testButton);
+        this.sidebar.appendChild(backButton);
     }
 
     onUpdate() {
