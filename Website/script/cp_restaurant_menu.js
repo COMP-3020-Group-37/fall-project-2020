@@ -61,7 +61,15 @@ export class RestaurantMenuCP extends Component {
 
         let foodDescription = this.doc.createElement('div');
         foodDescription.className = 'menu_item_background';
-        foodDescription.innerHTML = foodItem.name + " | " + foodItem.description;
+
+        if(foodItem.description)
+        {
+            foodDescription.innerHTML = foodItem.name + " | " + foodItem.description;
+        }
+        else
+        {
+            foodDescription.innerHTML = foodItem.name;
+        }
         this.element2.appendChild(foodDescription);
 
         let foodAdder = this.doc.createElement('div');

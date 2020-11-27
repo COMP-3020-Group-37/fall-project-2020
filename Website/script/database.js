@@ -42,18 +42,18 @@ export class Database {
         // ----- Set Restaurant Food Items -----
 
         //McDonlads
-        this.restaurants[0].addFoodItem(new FoodItem("Cheeseburger", 'Beef petite, 2 slices of cheddar, tomato, lettuce, and meyo', "images/restaurants/mcdonalds/burger1.jpg", 7, 5, "Burgers"));
-        this.restaurants[0].addFoodItem(new FoodItem("Burger", 'Beef petite, tomato, lettuce, red onion, and pickels ', "images/restaurants/mcdonalds/burger2.jpg", 8, 4, "Burgers"));
-        this.restaurants[0].addFoodItem(new FoodItem("Yammy Burger", 'Beef petite, cheddar, bacon, onion, and pickles', "images/restaurants/mcdonalds/burger3.jpg", 9, 3, "Burgers"));
+        this.restaurants[0].addFoodItem(new FoodItem("Cheeseburger", 'Beef patty, 2 slices of cheddar, tomato, lettuce, and mayo', "images/restaurants/mcdonalds/burger1.jpg", 7, 5, "Burgers"));
+        this.restaurants[0].addFoodItem(new FoodItem("Burger", 'Beef patty, tomato, lettuce, red onion, and pickels ', "images/restaurants/mcdonalds/burger2.jpg", 8, 4, "Burgers"));
+        this.restaurants[0].addFoodItem(new FoodItem("Yammy Burger", 'Beef patty, cheddar, bacon, onion, and pickles', "images/restaurants/mcdonalds/burger3.jpg", 9, 3, "Burgers"));
         this.restaurants[0].addFoodItem(new FoodItem("Cola", 'Coca Cola', "images/restaurants/mcdonalds/coke.jpg", 2, 5, "Drinks"));
         this.restaurants[0].addFoodItem(new FoodItem("Fries", 'Small delicious fries', "images/restaurants/mcdonalds/fries.jpg", 2, 5, "Fries"));
         this.restaurants[0].addFoodItem(new FoodItem("Ice cream", 'Vanilla ice cream', "images/restaurants/mcdonalds/icecream.jpg", 3, 5, "Desert"));
 
         //burger king
-        this.restaurants[1].addFoodItem(new FoodItem("Whopper", 'Beef petite, pickels, tomato, onion, and lettuce', "images/restaurants/burgerking/burger1.jpg", 7, 5, "Burgers"));
-        this.restaurants[1].addFoodItem(new FoodItem("Impossible Whopper", 'Double beef petite, double layer cheddar, bacon, pickles, onion, tomato, and lettuce', "images/restaurants/burgerking/burger2.jpg", 8, 4, "Burgers"));
-        this.restaurants[1].addFoodItem(new FoodItem("King single", 'Beef petite, pickels, tomato, onion, and lettuce', "images/restaurants/burgerking/burger3.jpg", 9, 3, "Burgers"));
-        this.restaurants[1].addFoodItem(new FoodItem("Special Drink ", '', "images/restaurants/burgerking/drink1.jpg", 8, 5, "Drinks"));
+        this.restaurants[1].addFoodItem(new FoodItem("Whopper", 'Beef patty, pickels, tomato, onion, and lettuce', "images/restaurants/burgerking/burger1.jpg", 7, 5, "Burgers"));
+        this.restaurants[1].addFoodItem(new FoodItem("Impossible Whopper", 'Double beef patty, double layer cheddar, bacon, pickles, onion, tomato, and lettuce', "images/restaurants/burgerking/burger2.jpg", 8, 4, "Burgers"));
+        this.restaurants[1].addFoodItem(new FoodItem("King single", 'Beef patty, pickels, tomato, onion, and lettuce', "images/restaurants/burgerking/burger3.jpg", 9, 3, "Burgers"));
+        this.restaurants[1].addFoodItem(new FoodItem("Special Drink", '', "images/restaurants/burgerking/drink1.jpg", 8, 5, "Drinks"));
         this.restaurants[1].addFoodItem(new FoodItem("Fries", 'Medius classic fries', "images/restaurants/burgerking/fries.jpg", 2, 5, "Fries"));
         this.restaurants[1].addFoodItem(new FoodItem("King wrap", 'Beed warp with pickles, lettuce, tomato, and special sauce', "images/restaurants/burgerking/wrap.jpg", 2, 5, "Wraps"));
         this.restaurants[1].addFoodItem(new FoodItem("Original wrap", 'Check warp with cheese, lettuce, and tomato', "images/restaurants/burgerking/wrap2.jpg", 3, 5, "Wraps"));
@@ -62,7 +62,7 @@ export class Database {
         this.restaurants[2].addFoodItem(new FoodItem("Drink", 'Coca Cola', "images/restaurants/bostonpizza/coke.jpg", 7, 5, "Drinks"));
         this.restaurants[2].addFoodItem(new FoodItem("Amigo Pizza", 'Our special pizza with cherry tomato, chicken and mozzarella', "images/restaurants/bostonpizza/pizza1.jpeg", 8, 4, "Pizzas"));
         this.restaurants[2].addFoodItem(new FoodItem("Royal Pizza", 'Pizza with green onion, ground beef and lots of cheese ', "images/restaurants/bostonpizza/pizza2.jpeg", 9, 3, "Pizzas"));
-        this.restaurants[2].addFoodItem(new FoodItem("Metaor Pizza", 'Pizza with chicke, red onion, and our special sauce', "images/restaurants/bostonpizza/pizza3.jpeg", 8, 5, "Pizzas"));
+        this.restaurants[2].addFoodItem(new FoodItem("Metaor Pizza", 'Pizza with n, red onion, and our special sauce', "images/restaurants/bostonpizza/pizza3.jpeg", 8, 5, "Pizzas"));
         this.restaurants[2].addFoodItem(new FoodItem("Viva Italia", 'Pizza with green onion, tomato, and 3 types of cheese', "images/restaurants/bostonpizza/pizza4.jpg", 2, 5, "Pizzas"));
         this.restaurants[2].addFoodItem(new FoodItem("Special salad", 'Chicken salad with pecan, cucumber, cheddar, bacon, tomato, carrots and lettuce', "images/restaurants/bostonpizza/salad.png", 2, 5, "Salads"));
         this.restaurants[2].addFoodItem(new FoodItem("Delux pizza", 'Pizza with black olives, pepperoni, and green pepper', "images/restaurants/bostonpizza/pizza5.jpg", 3, 5, "Pizzas"));
@@ -77,7 +77,7 @@ export class Database {
         this.restaurants[3].addFoodItem(new FoodItem("Delux pizza", 'Pizza with red onion, tomato, pesto, and ham', "images/restaurants/pizzahut/pizza4.png", 3, 5, "Pizzas"));
 
         //AW
-        this.restaurants[4].addFoodItem(new FoodItem("Teen burger", 'Beef petite with onion, pickles and sauce', "images/restaurants/aw/burger1.jpg", 8, 3, "Burgers"));
+        this.restaurants[4].addFoodItem(new FoodItem("Teen burger", 'Beef patty with onion, pickles and sauce', "images/restaurants/aw/burger1.jpg", 8, 3, "Burgers"));
         this.restaurants[4].addFoodItem(new FoodItem("Mozza burger", 'Doubled beef burger with double chadder, tomato, onion, and lettuce', "images/restaurants/aw/burger2.png", 7, 5, "Burgers"));
         this.restaurants[4].addFoodItem(new FoodItem("MAMA burger", 'Cheese burger with carmelized onions, tomato, and lettuce', "images/restaurants/aw/burger3.jpg", 5, 4, "Burgers"));
         this.restaurants[4].addFoodItem(new FoodItem("Fries", 'Russet thick cut fries', "images/restaurants/aw/fries.jpg", 3, 4, "Fries"));
@@ -123,10 +123,10 @@ export class Database {
 
         //Smitty
         this.restaurants[10].addFoodItem(new FoodItem("Health salad", 'Vegatable salad with boiled eggs, chicken, and bacon', "images/restaurants/smitty/smitty1.jpg",5,4,"Salads"));
-        this.restaurants[10].addFoodItem(new FoodItem("Everything in one", 'Omplette with spinachh and potatos', "images/restaurants/smitty/smitty2.jpg",8,4,"Breakfast"));
+        this.restaurants[10].addFoodItem(new FoodItem("Everything in one", 'Omplette with spinach and potatos', "images/restaurants/smitty/smitty2.jpg",8,4,"Breakfast"));
         this.restaurants[10].addFoodItem(new FoodItem("Best morning", 'Fried eggs with potatos, bacon, and bread ', "images/restaurants/smitty/smitty3.jpg",8,3,"Breakfast"));
         this.restaurants[10].addFoodItem(new FoodItem("Crazy wings", '2 types of wings, regular and spicy', "images/restaurants/smitty/smitty4.jpg",12,5,"Wings"));
-        this.restaurants[10].addFoodItem(new FoodItem("All you can think", 'Breakfast deal with all the goods', "images/restaurants/smitty/smitty5.jpg",6,4,"Breakfast"));
+        this.restaurants[10].addFoodItem(new FoodItem("All you can think of", 'Breakfast deal with all the goods', "images/restaurants/smitty/smitty5.jpg",6,4,"Breakfast"));
         this.restaurants[10].addFoodItem(new FoodItem("Buddy burger", 'Burger with onion rings, tomato, lettuce, bacon, and red onion', "images/restaurants/smitty/smitty6.jpg",7,4,"Burgers"));
 
         //Subway
@@ -138,7 +138,7 @@ export class Database {
         this.restaurants[11].addFoodItem(new FoodItem("MAMA wrap", 'Sweet onion chicken teriyaki wrap', "images/restaurants/subway/subway6.jpg",5,5,"Wraps"));
 
         //Sushi Gozen
-        this.restaurants[12].addFoodItem(new FoodItem("dragon roll", 'Shrimp roll with cucumbers and avocado', "images/restaurants/sushigozen/sushiGo1.jpg",10,5,"Sushi"));
+        this.restaurants[12].addFoodItem(new FoodItem("Dragon roll", 'Shrimp roll with cucumbers and avocado', "images/restaurants/sushigozen/sushiGo1.jpg",10,5,"Sushi"));
         this.restaurants[12].addFoodItem(new FoodItem("Combo 3", 'Combo with 3 special rolls', "images/restaurants/sushigozen/sushiGo2.jpg",11,5,"Sushi"));
         this.restaurants[12].addFoodItem(new FoodItem("Dynamite roll", 'Dynamite roll with avocaso and shrimp', "images/restaurants/sushigozen/sushiGo3.jpg",8,4,"Sushi"));
         this.restaurants[12].addFoodItem(new FoodItem("Combo 1", 'Combo for one with fresh salmon and tuna', "images/restaurants/sushigozen/sushiGo4.jpg",11,4,"Sushi"));
@@ -175,7 +175,7 @@ export class Database {
         this.restaurants[16].addFoodItem(new FoodItem("Good morning meal", 'Chocolate donut with coffee', "images/restaurants/timhorton/timh1.jpg",10,4,"Breakfast"));
         this.restaurants[16].addFoodItem(new FoodItem("Drink", 'coffee', "images/restaurants/timhorton/timh2.jpg",4,4,"Drinks"));
         this.restaurants[16].addFoodItem(new FoodItem("Energy meal", 'breakfast wrap with a drink', "images/restaurants/timhorton/timh3.jpg",8,4,"Breakfast"));
-        this.restaurants[16].addFoodItem(new FoodItem("brunch sandwich", 'sandwich with meat, eggs, and cheese, with coffee', "images/restaurants/timhorton/timh4.jpg",10,5,"Breakfast"));
+        this.restaurants[16].addFoodItem(new FoodItem("Brunch sandwich", 'sandwich with meat, eggs, and cheese, with coffee', "images/restaurants/timhorton/timh4.jpg",10,5,"Breakfast"));
         this.restaurants[16].addFoodItem(new FoodItem("Holiday donut", 'Christamas donut', "images/restaurants/timhorton/timh5.jpg",2,4,"Desert"));
         this.restaurants[16].addFoodItem(new FoodItem("Hot drink", 'tea', "images/restaurants/timhorton/timh6.jpg",3,4,"Drinks"));
         this.restaurants[16].addFoodItem(new FoodItem("Happy donut", 'Coloful donut', "images/restaurants/timhorton/timh7.jpg",2,4,"Desert"));
@@ -195,7 +195,7 @@ export class Database {
         this.restaurants[18].addFoodItem(new FoodItem("Big party meal", 'Full meal with fries', "images/restaurants/aroma/aroma2.jpg",4,4,"Fries"));
         this.restaurants[18].addFoodItem(new FoodItem("Crazy burger", 'Loaded burger', "images/restaurants/aroma/aroma3.jpg",6,5,"Burgers"));
         this.restaurants[18].addFoodItem(new FoodItem("Energy salad", 'lettuce salad with black olives', "images/restaurants/aroma/aroma4.jpg",3,4,"Salads"));
-        this.restaurants[18].addFoodItem(new FoodItem("Special drink", 'Fresh lemonade', "images/restaurants/aroma/aroma5.jpg",5,5,"Drinks"));
+        this.restaurants[18].addFoodItem(new FoodItem("Special Drink", 'Fresh lemonade', "images/restaurants/aroma/aroma5.jpg",5,5,"Drinks"));
         this.restaurants[18].addFoodItem(new FoodItem("Special cake", 'Cheese cake', "images/restaurants/aroma/aroma6.jpg",4,5,"Desert"));
 
         //Menchies Frozen Yogurt
