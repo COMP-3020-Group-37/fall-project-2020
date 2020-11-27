@@ -13,7 +13,7 @@ export class SideBarCartCP extends Component {
 
         this.header = doc.createElement('h1');
         this.header.className = 'cart_title';
-        this.header.innerHTML = "Cart";
+        this.header.innerHTML = 'Cart';
 
         this.table = doc.createElement('table');
         this.table.className = 'cart_table';

@@ -3,17 +3,11 @@
     position: relative;
     top: 30px;
     right: 120px;
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 712c930505ee61c7f0c44b6ddac08ac463414c0b
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: transparent;
     width: 200px;
     height: 300px;
     overflow: auto;
@@ -27,8 +21,8 @@
     width: 100%;
 }
 
-.dropdown-content button:hover {
-    background-color: rgb(143, 140, 140);
+.dropdown-content .btn:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 }
 
 .show {display: block;}

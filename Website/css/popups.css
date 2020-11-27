@@ -49,6 +49,8 @@ input[type=text], input[type=password] {
   
   .container {
     padding: 16px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
   
   span.psw {
@@ -69,6 +71,7 @@ input[type=text], input[type=password] {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
+    
   }
   
   /* Modal Content/Box */
@@ -77,6 +80,8 @@ input[type=text], input[type=password] {
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 50%; 
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   }
   
   /* The Close Button (x) */

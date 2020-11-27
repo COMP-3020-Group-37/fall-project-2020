@@ -5,22 +5,21 @@
 }
 .cart_title {
   display: inline-block;
-  padding: 10px 20px;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: white;
+  padding: 10px;
+  background: none;
+  color: black;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
-
 
 .cart_table{
 border-collapse: collapse;
-width: 100%;
+width: 90%;
+margin-left: 5%;
 }
+
 .cart_table td, th {
   border: 1px solid #dddddd;
   text-align: center;
@@ -28,128 +27,143 @@ width: 100%;
 }
 
 .cart_count {
-display: flex;
-width: 100%;
-justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .cart_count p {
-margin: 0 8px;
+  margin: 0 8px;
+}
+
+.cart_count i:hover {
+  text-shadow: rgba(0,0,0,0.8) 0 0 10px;
+  font-size: 105%;
 }
 
 .add_remove_item {
-padding: 3px 4px;
-border-radius: 5px;
+  padding: 3px 4px;
+  border-radius: 5px;
 }
 .cart_table tr:nth-child(even) {
-background-color: #dddddd;
+  background-color: #dddddd;
 }
 
 .restaurant-info{
-width: initial;
-display: grid;
-gap: 20px;
-justify-content: left;
-grid-template-columns:20% 70%;
-margin-bottom: 10px;
+  width: initial;
+  display: grid;
+  gap: 20px;
+  justify-content: left;
+  grid-template-columns:20% 70%;
+  margin-bottom: 10px;
 }
 
 .special_img{
-width: 100%;  
-margin: 20px;
+  width: 100%; 
+  margin: 20px;
+  border-radius: 5px;
 }
 
 .restaurant-description{
-background-color: white;
-margin: 10px;
-position: relative;
-border-radius: 5px;
-width: 100%;
+  background-color: white;
+  margin: 10px;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .restaurant-description h1{
-position: relative;
-margin: 5px;
-text-align: center;
-background-color: lightgrey;
+  position: relative;
+  margin: 5px;
+  text-align: center;
+  background-color: lightgrey;
 }
 
 .rest_information{
-display: grid;
-grid-template-columns: auto auto;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .rest_information h2{
-color: var(--primary-color);
-text-align: center;
+  color: var(--primary-color);
+  text-align: center;
 }
 
 .grid-hoursOfOperation{
-width: 100%;
-display: grid;
-grid-template-columns: auto auto;
-padding: 2px;
-text-align: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 2px;
+  text-align: center;
 }
 
 .contact_restaurant {
-position: relative;
-text-align:center;
+  position: relative;
+  text-align:center;
 }
 
 .menu-options{
-width: auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, 15%);
-justify-content: center;
-gap: 10px;
-background-color: white;
-cursor: pointer;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10%);
+  justify-content: center;
+  gap: 50px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 190px;
 }
 
 .menu-options div {
   justify-self: center;
+  text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  background-color: var(--primary-color);
+  color: white;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .menu-options div:hover {
-  background-color: lightgray;
-  font-weight: bold; 
+  font-weight: bold;
+  box-shadow:  0 5px 10px rgba(0, 0, 0, 1.0);
 }
 
 .menu{
-grid-template-columns: 8% 60% 10% 7% 7%;
-display: grid;
-margin-top: 5px;
-margin-left: 5px;
-gap: 10px; 
-justify-content: center;
+  grid-template-columns: 8% 60% 10% 7% 7%;
+  display: grid;
+  margin-top: 5px;
+  margin-left: 5px;
+  gap: 10px; 
+  justify-content: center;
 }
 
 .menu_item_image{
-background-color: white;
-border-radius: 5px;
-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
-text-align: center;
+  background-color: transparent;
+  border-radius: 5px; 
+  text-align: center;
 }
 
 .menu_image{
-padding: 3px;
-width: 100%;
-vertical-align: middle;
+  padding: 3px;
+  vertical-align: middle;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .menu_item_background {
-padding: 2px;
-border: 3px black;
-background-color: white;
-border-radius: 5px;
-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-display : flex;
-align-items : center;
-justify-content: center;
-text-align: center;
+  padding: 2px;
+  border: 3px black;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  text-align: center;
 }
 
 .menu_item_background .add-button
@@ -158,21 +172,16 @@ text-align: center;
   height: 100%;
   background-color: transparent;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
-}
-
-.menu_item_background .add-button i
-{
-  font-size: 300%;
-}
-
-.menu_item_background .add-button:active i{
-  color: black;
+  font-size:300%;
 }
 
 
 .menu_item_background button:hover{
-  background-color: #dddddd;
+  color: black;
+  font-size: 400%;
+  text-shadow: rgba(0,0,0,0.8) 0 0 10px;
 }
 
 .logoImg {
@@ -180,5 +189,6 @@ text-align: center;
 }
 
 .cart-total {
-  margin-left: 25px;
+  margin-right: 5%;
+  text-align: right;
 }
