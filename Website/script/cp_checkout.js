@@ -17,6 +17,9 @@ export class CheckoutCP extends Component {
         this.table.className = 'final_cart_table';
         this.clear();
 
+        this.yourTotal = doc.createElement('h2');
+        this.yourTotal.className = 'your-total';
+
         this.yourAddress = doc.createElement('div');
         this.yourAddress.className = 'EnterCheckOut';
         this.yourAddress.innerHTML = 'Your Address: <input type="text" id="input-address" name="location">';
@@ -30,6 +33,7 @@ export class CheckoutCP extends Component {
         this.placeOrder.innerHTML = 'Place Order';
 
         this.element2.appendChild(this.table);
+        this.element2.appendChild(this.yourTotal);
         this.element2.appendChild(this.yourAddress);
         this.element2.appendChild(this.yourPhone);
         this.element2.appendChild(this.placeOrder);
@@ -39,6 +43,10 @@ export class CheckoutCP extends Component {
         this.table.innerHTML = '<div class ="final_cart_title">Item</div>' +
                                '<div class ="final_cart_title">Quantity</div>' +
                                '<div class ="final_cart_title">Price</div>';
+    }
+
+    setTotal(amount) {
+        this.yourTotal.innerHTML = 'Total: $' + amount + ".00";
     }
 
     addFoodItem(foodItem, amount) {

@@ -35,9 +35,13 @@ export class StateCart extends State {
         });
 
         this.checkoutCP.clear();
+        let total = 0;
         for (let i = 0; i < this.db.cartItems.length; i++) {
             this.checkoutCP.addFoodItem(this.db.cartItems[i], this.db.cartItemsCount[i]);
+            total += this.db.cartItems[i].price * this.db.cartItemsCount[i];
         }
+
+        this.checkoutCP.setTotal(total);
 
         this.sidebar.style.width = '0px';
         this.sortHeader.style.display = 'none';

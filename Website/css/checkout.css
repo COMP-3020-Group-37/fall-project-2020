@@ -78,3 +78,10 @@
     text-align: center;
     color: rgb(250, 29, 0);
 }
+
+.your-total {
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 220px;
+    color: #ff5e00;
+}
