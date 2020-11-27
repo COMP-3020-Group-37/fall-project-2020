@@ -16,18 +16,31 @@
   .final_cart_table{
     display: grid;
     grid-template-columns: 70% 15% 15%;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
     width: 70%;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-
     top: 50px;
+    box-shadow: 3px 2px 5px #bebebe;
 }
+
+.final_cart_title{
+    background-color: white;
+    font-size: 200%;
+    color: #ff5e00;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
   .final_cart_table div {
-      border-left: 1px solid black;
-      border-bottom: 1px solid black;
+      border-left: 2px solid grey;
+      border-bottom: 2px solid grey;
+      height: 40px;
+      line-height: 40px;
+      background-color:white;
   }
   
   #main_checkout {
@@ -36,18 +49,25 @@
 
     .EnterCheckOut{
         margin-top: 30px;
-        width: 70%;
-        border: 1px solid black;
+        width: 50%;
+        border: 2px solid grey;
         margin-right: auto;
         margin-left: auto;
         padding: 10px;
+        height: 50px;
+        font-size: 150%;
+        box-shadow: 3px 2px 5px #bebebe;
     }
     .EnterCheckOut input{
-        width: 30%;
+        width: 50%;
+        height: 100%;
+        border: none;
     }
     .placeOrder{
-        width: 50%;
+        width: 30%;
         margin-right: auto;
         margin-left: auto;
         margin-top: 30px;
+        font-size: 150%;
+        box-shadow: 3px 2px 5px #bebebe;
     }

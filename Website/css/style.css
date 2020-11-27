@@ -277,3 +277,13 @@ a {
     color: inherit;
 }
 
+.final{
+    font-size: 80px;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+#main_final{
+    margin-left: 0px !important;
+}
