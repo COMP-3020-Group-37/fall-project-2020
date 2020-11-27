@@ -143,9 +143,29 @@
                 <input>
             </div>
 
-           <a href="finalPage.html"> <button class="placeOrder btn">Place Order</button></a>
+            <a> <button class="placeOrder btn"  onclick="document.openPopUpID('orderPlaced')" style="width:auto;">Place Order</button></a>
         </div>
- 
+
+
+        <div id="orderPlaced" class="modal">
+            <div class="modal-content anim-zoom">
+                <div class="titlecontainer">
+                    <span onclick="closePopUpID('orderPlaced')" class="close"
+                        title="Close Modal">&times;
+                    </span>
+                    <div class="final" style="cursor:initial;"> 
+                        Thank you for buying from us.
+                        <br>
+                        Your order is on the way!</div>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                 <a href="index.html">   <button type="button" onclick="closePopUpID('orderPlaced')"
+                        class="popup_button cancelbtn">
+                        Close</button>
+                    </a>
+                </div>
+            </div>
+        </div>
 
     </main>
 
