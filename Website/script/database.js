@@ -103,7 +103,7 @@ export class Database {
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Rice salad with avocado and beans',  "images/restaurants/freshii/freshii2.jpg", 6, 5, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Beet salad with carrots, quinoa, cheese, and cranberries',  "images/restaurants/freshii/freshii3.jpg", 5, 4, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'chicken wrap with pineapple and lettuce',  "images/restaurants/freshii/freshii4.jpg", 5, 4, "Wraps"));
-        this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Smoothie with banana, strawberry, and pineapple  ',  "images/restaurants/freshii/freshii5.jpg", 7, 5, "desert"));
+        this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Smoothie with banana, strawberry, and pineapple  ',  "images/restaurants/freshii/freshii5.jpg", 7, 5, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Rice noodle salad with tofu nd broccoli',  "images/restaurants/freshii/freshii6.jpg", 6, 4, "Salads"));
         this.restaurants[7].addFoodItem(new FoodItem("Freshii", 'Rice salad wihh corn, avocado, beans, and tomato',  "images/restaurants/freshii/freshii7.jpg", 4, 3, "Salads"));
 
