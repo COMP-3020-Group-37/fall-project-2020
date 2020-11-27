@@ -150,6 +150,11 @@ text-align: center;
   cursor: pointer;
 }
 
+.menu_item_background .add-button i
+{
+  font-size: 50px;
+}
+
 .menu_item_background .add-button:active i{
   color: black;
 }
