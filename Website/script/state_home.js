@@ -84,7 +84,10 @@ export class StateHome extends State {
                     this.doc.location.hash = "view/" + item.restaurant.name.replace(/\s/g, '') + '/' + itemID;
                 }
                 else {
-                    alert("You first need to enter your address");
+                    this.doc.getElementById('location').style.display = 'block';
+                    let locationWarning = this.doc.getElementById('warning-location');
+                    locationWarning.style.display = '';
+                    locationWarning.innerHTML = 'Please first enter your address';
                 }
             });
 
