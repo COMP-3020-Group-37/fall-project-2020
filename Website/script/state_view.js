@@ -79,7 +79,7 @@ export class StateView extends State {
 
         let backButton = this.doc.createElement('button');
         backButton.innerHTML = 'Back';
-        backButton.className = 'btn';
+        backButton.className = 'btn mg-top';
 
         backButton.addEventListener('click', () => {
             this.doc.location.hash = 'home';

@@ -277,7 +277,7 @@ a {
 }
 
 .final{
-    font-size: 80px;
+    font-size: 50px;
     color: var(--primary-color);
     text-align: center;
     position: relative;
@@ -285,4 +285,8 @@ a {
 }
 #main_final{
     margin-left: 0px !important;
+}
+
+.mg-top {
+    margin-top: 10px;
 }
