@@ -71,3 +71,10 @@
         font-size: 150%;
         box-shadow: 3px 2px 5px #bebebe;
     }
+
+.final-text {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(250, 29, 0);
+}

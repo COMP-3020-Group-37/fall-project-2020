@@ -70,7 +70,7 @@ export class AccountNavCP extends Component {
                 }
                 else {
                     this.home.displayHome();
-                    alert("Need to signin or register to access this feature");
+                    alert("Please login to access this feature");
                     return false;
                 }
 

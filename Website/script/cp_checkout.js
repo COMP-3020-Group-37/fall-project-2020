@@ -19,11 +19,11 @@ export class CheckoutCP extends Component {
 
         this.yourAddress = doc.createElement('div');
         this.yourAddress.className = 'EnterCheckOut';
-        this.yourAddress.innerHTML = 'Your Address: <input>';
+        this.yourAddress.innerHTML = 'Your Address: <input type="text" id="input-address" name="location">';
 
         this.yourPhone = doc.createElement('div');
         this.yourPhone.className = 'EnterCheckOut';
-        this.yourPhone.innerHTML = 'Phone #: <input>';
+        this.yourPhone.innerHTML = 'Phone #: <input type="text" id="input-phone" name="location">';
 
         this.placeOrder = doc.createElement('button');
         this.placeOrder.className = 'placeOrder btn';

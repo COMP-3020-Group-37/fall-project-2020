@@ -15,7 +15,7 @@ export class FoodItemCP extends Component {
 
         this.element.innerHTML =    '<div class = "restImg">' +
                                         '<img src="' + data.iconPath + '">' +
-                                        '<div class = "restLogo">LOGO</div>' +
+                                        '<div class = "restLogo"><img class="logoImg" src="' + data.restaurant.iconPath + '"></div>' +
                                     '</div>' +
                                     '<div class = "cardInfo">' +
                                         '<div class = "restName">' + data.name + '</div>' +

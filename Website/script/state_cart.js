@@ -21,6 +21,18 @@ export class StateCart extends State {
             this.doc.location.hash = "view/" + this.db.cartItems[0].restaurant.name.replace(/\s/g, '');
         });
 
+        this.checkoutCP.placeOrder.addEventListener('click', () => {
+
+            if (this.doc.getElementById('input-address').value == '') {
+                alert("Please enter your address");
+            }
+            else if (this.doc.getElementById('input-phone').value == '') {
+                alert("Please enter your phone number");
+            }
+            else {
+                this.doc.getElementById('orderPlaced').style.display = 'block';
+            }
+        });
 
         this.checkoutCP.clear();
         for (let i = 0; i < this.db.cartItems.length; i++) {
