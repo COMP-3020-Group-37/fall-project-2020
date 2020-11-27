@@ -23,8 +23,6 @@ export class StateCart extends State {
 
         this.checkoutCP.placeOrder.addEventListener('click', () => {
 
-            console.log(this.doc.getElementById('input-address').value)
-
             if (this.doc.getElementById('input-address').value == '') {
                 alert("Please enter your address");
             }
