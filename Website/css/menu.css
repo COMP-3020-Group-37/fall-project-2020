@@ -147,6 +147,11 @@ margin-left: 5%;
   text-align: center;
 }
 
+.menu_item_image * {
+  width: 100px;
+  height: 100px;
+}
+
 .menu_image{
   padding: 3px;
   vertical-align: middle;
@@ -191,4 +196,13 @@ margin-left: 5%;
 .cart-total {
   margin-right: 5%;
   text-align: right;
+}
+
+.special_img_background {
+  width: 300px;
+}
+
+.special_img_background * {
+  width: 300px;
+  height: 300px;
 }
