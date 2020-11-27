@@ -1,36 +1,48 @@
 # fall-project-2020
-To open the website:
+## To open the website:
 
- just click the index.html and Right click choose "Open In Default Browser" ,Or you can find link in our report.
+* Click the index.html and Right click choose "Open In Default Browser"
+* Or you can use the following link https://comp-3020-group-37.github.io/fall-project-2020/Website/index.html
 
- Our Admin account:
+## In order to login
 
- Username:  admin
- Password:  password
+you can create your own account or login with a default admin account
 
- What works:
-support regular user choose food and check out some parts not shown just main parts
-1. we let user enter address mandatory, this will avoid user choose restaurant that not support, do it at first, not last step to find error.
-2. you can login admin to find favourite and will popups error when you not signin
-3. can touch logo to back the main page, however many users don't know, we also have "back" button.
+* Username:  admin
+* Password:  password
 
-4.  we have side bar to give categories and popular let user choose kind of foods.
-5. sort food by "distance", "rate", "price".
-6. we have policy let user to look.
-7. can signin and register.
-8. touch picture go to the restaurant page.
-9. on restaurant page you can plus and minus item to the cart,search kind of item by some Top bar, let user quickly find,not look all menu.
-10. can see  what on the cart and total price, and plus or minus item from cart.
-11. then touch "checkout" go to checkout page or "back" go to main page.
-12 on the check out page we let user add information to "place order" or you can go back "add more item"
+## What works
+
+1. Enter your address is mandatory, this will avoid users for choosing restaurant that do not delivier to thier address.
+    * If a use forgets a popup will appear before they enter a menu
+
+2. You can login with the admin account to find your favourite foods
+    * You can not access favourites unless you are signed in
+
+3. The Logo will always bring you back to the main page
+    * However we also provide back buttons
+
+4. You can filter food items by category or view currently popular food items
+
+5. You can sort food by distance, rate, and price in any category.
+
+6. You can view the policy by clicking on policy on the main page.
+
+7. At the restaurant page you can add food items to cart, and change the quantity of food you want to order.
+
+8. Press "checkout" go to checkout page or "back" go to main page.
+
+9. At the checkout page you can go back to to menu to add more items
+
+10. At the checkout page you need to enter to phone number before your order will be sent.
 
 
-what not works:
-1. not have the search for given words, because we have enough information on the side bar let user to find kinds of food.
-but will fixed in feature.
+## What does not work
 
-2. not have button to let user choose item become the favourite,will fixed in the feature.
+1. The search function on the main page does not work
 
-3. not very good connect item and restaurant, almost good. will fixed in the feature.
+2. There currently is not button to favourite a restaunt or food item.
 
-those not work will not affect user to order food. 
+3. Forgot password feature does not work
+
+4. We do not detect if your address or phonenumber is valid
