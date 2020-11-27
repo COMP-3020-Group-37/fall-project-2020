@@ -22,7 +22,7 @@ export class CheckoutCP extends Component {
 
         this.yourAddress = doc.createElement('div');
         this.yourAddress.className = 'EnterCheckOut';
-        this.yourAddress.innerHTML = 'Your Address: <input type="text" id="input-address" name="location">';
+        this.yourAddress.innerHTML = 'Your Address: ';
 
         this.yourPhone = doc.createElement('div');
         this.yourPhone.className = 'EnterCheckOut';
@@ -47,6 +47,7 @@ export class CheckoutCP extends Component {
 
     setTotal(amount) {
         this.yourTotal.innerHTML = 'Total: $' + amount + ".00";
+        this.yourAddress.innerHTML = 'Your Address: ' + this.db.yourLocation;
     }
 
     addFoodItem(foodItem, amount) {
@@ -55,6 +56,8 @@ export class CheckoutCP extends Component {
         let itemTotalPrice = itemPrice * amount;
 
         let nameElement = this.doc.createElement('div');
+        nameElement.style.textAlign = "left";
+        nameElement.style.paddingLeft = "20px";
         nameElement.innerHTML = itemName;
 
         let amountElement = this.doc.createElement('div');

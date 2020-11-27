@@ -23,10 +23,7 @@ export class StateCart extends State {
 
         this.checkoutCP.placeOrder.addEventListener('click', () => {
 
-            if (this.doc.getElementById('input-address').value == '') {
-                alert("Please enter your address");
-            }
-            else if (this.doc.getElementById('input-phone').value == '') {
+            if (this.doc.getElementById('input-phone').value == '') {
                 alert("Please enter your phone number");
             }
             else {
@@ -46,6 +43,11 @@ export class StateCart extends State {
         this.sidebar.style.width = '0px';
         this.sortHeader.style.display = 'none';
         this.localtionBUtton.disabled = true;
+        this.localtionBUtton.children[0].remove();
+        let lockIcon = this.doc.createElement('i');
+        lockIcon.className = 'fa fa-lock'
+        this.localtionBUtton.appendChild(lockIcon);
+
         this.root.style.setProperty('--sidebar-width', '0px');
     }
 
@@ -58,5 +60,10 @@ export class StateCart extends State {
         this.main.className = 'main'
         this.localtionBUtton.disabled = false;
         this.root.style.setProperty('--sidebar-width', this.sidebarWidthOriginal);
+
+        this.localtionBUtton.children[0].remove();
+        let lockIcon = this.doc.createElement('i');
+        lockIcon.className = 'fa fa-chevron-down';
+        this.localtionBUtton.appendChild(lockIcon);
     }
 }

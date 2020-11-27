@@ -40,6 +40,7 @@ export class SideBarCartCP extends Component {
       item.total = 1;
 
       let itemName = this.doc.createElement('td');
+      itemName.style.textAlign = "left";
       itemName.innerHTML = foodItem.name;
 
       let itemCount = this.doc.createElement('td');

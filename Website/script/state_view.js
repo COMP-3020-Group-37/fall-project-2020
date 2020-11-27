@@ -48,6 +48,11 @@ export class StateView extends State {
         this.main.className = 'main_order'
         this.root.style.setProperty('--sidebar-width', this.sidebarWidth);
         this.localtionBUtton.disabled = true;
+        this.localtionBUtton.children[0].remove();
+        let lockIcon = this.doc.createElement('i');
+        lockIcon.className = 'fa fa-lock'
+        this.localtionBUtton.appendChild(lockIcon);
+
         this.sortHeader.style.display = 'none';
 
         this.totalAmount = this.doc.createElement('h2');
@@ -110,5 +115,10 @@ export class StateView extends State {
         this.root.style.setProperty('--sidebar-width', this.sidebarWidthOriginal);
         this.localtionBUtton.disabled = false;
         this.sortHeader.style.display = '';
+
+        this.localtionBUtton.children[0].remove();
+        let lockIcon = this.doc.createElement('i');
+        lockIcon.className = 'fa fa-chevron-down';
+        this.localtionBUtton.appendChild(lockIcon);
     }
 }

@@ -1,6 +1,6 @@
 .addMore_checkout{
     float:right;
-    right: 20%; 
+    right: 31.25%; 
     margin-top: 5px;
     position: relative;
 }
@@ -15,15 +15,16 @@
 
   .final_cart_table{
     display: grid;
-    grid-template-columns: 70% 15% 15%;
+    grid-template-columns: 60% 25% 15%;
     border-top: 2px solid grey;
     border-right: 2px solid grey;
-    width: 70%;
+    width: 50%;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
     top: 50px;
     box-shadow: 3px 2px 5px #bebebe;
+
 }
 
 .final_cart_title{
@@ -48,6 +49,7 @@
     }
 
     .EnterCheckOut{
+        background-color: white;
         margin-top: 30px;
         width: 50%;
         border: 2px solid grey;
@@ -61,7 +63,9 @@
     .EnterCheckOut input{
         width: 50%;
         height: 100%;
-        border: none;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
     }
     .placeOrder{
         width: 30%;
@@ -82,6 +86,8 @@
 .your-total {
     text-align: right;
     margin-top: 15px;
-    margin-right: 220px;
+    width: 50%;
+    justify-content: center;
+    justify-self: center;
     color: #ff5e00;
 }
