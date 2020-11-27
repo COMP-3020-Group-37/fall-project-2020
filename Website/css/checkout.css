@@ -49,6 +49,7 @@
     }
 
     .EnterCheckOut{
+        background-color: white;
         margin-top: 30px;
         width: 50%;
         border: 2px solid grey;
@@ -62,7 +63,9 @@
     .EnterCheckOut input{
         width: 50%;
         height: 100%;
-        border: none;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
     }
     .placeOrder{
         width: 30%;
