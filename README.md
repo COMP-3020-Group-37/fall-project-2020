@@ -4,6 +4,8 @@
 * Click the index.html and Right click choose "Open In Default Browser"
 * Or you can use the following link https://comp-3020-group-37.github.io/fall-project-2020/Website/index.html
 
+* Github link https://github.com/COMP-3020-Group-37/fall-project-2020
+
 ## In order to login
 
 you can create your own account or login with a default admin account
