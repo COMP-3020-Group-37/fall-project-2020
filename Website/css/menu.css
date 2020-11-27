@@ -164,3 +164,6 @@ text-align: center;
   background-color: #dddddd;
 }
 
+.logoImg {
+  border-radius: 50%;
+}
